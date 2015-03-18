@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'middleman'
-gem 'middleman-livereload', '~> 3.1.0'
-gem 'middleman-deploy', '~> 0.3.0'
-gem 'rack-contrib'
-gem 'unicorn'
-gem 'foreman'
+gem 'middleman', '~> 3.3.10'
+gem 'middleman-livereload', '~> 3.4.2'
+gem 'middleman-deploy', '~> 1.0.0'

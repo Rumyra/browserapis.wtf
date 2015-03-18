@@ -57,7 +57,9 @@ set :js_dir, 'assets/javascripts'
 
 set :images_dir, 'assets/images'
 
-set :build_dir, 'site'
+activate :deploy do |deploy|
+  deploy.method = :git
+end
 
 # Build-specific configuration
 configure :build do

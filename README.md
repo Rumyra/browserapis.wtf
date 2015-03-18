@@ -2,29 +2,26 @@
 
 Web site categorising all the web/browser apis - their code, resources, w3c status and other links.
 
-#### Middleman for site generation
+## Development
 
-Fork repo
+I'm a Middleman site, the standard setup applies:
 
-##### Commands
+```
+# Install Dependencies
+bundle install
+# Run the Middleman server, watching for any changes
+bundle exec middleman
 
-  - bundle install
 
-  - middleman
-    - `middleman s -p 4000` (runs with a watcher for when editing files)
+## Deployment
 
-  ```
-  == The Middleman is loading
-  == The Middleman is standing watch at http://0.0.0.0:4000
-  == Inspect your site configuration at http://0.0.0.0:4000/__middleman/
+I use the Middleman-deploy plugin which shall deploy to GitHub Pages. This
+shall perform a clean build and deploy to GitHub:
 
-  ```
+```
+bundle exec middleman deploy --build-before
+```
 
-    - `middleman build` (builds the static site to /site dir)
-
-  - `rackup` - builds the site dir and runs on port 9292 (unless using the `-p 3000` argument)
-
-  - `foreman start` - builds the site dir and runs on port 4000
 
 ## Assets structure (where to find things).
 
@@ -55,20 +52,6 @@ All variables and mixins can be found in the files that they are used, unless th
 CSS properties are ordered as positioning, box-model layout, box-model styling, font/text styles, others.
 
 Sizings are mostly in ems, with a reduction in body font size for a basic responsiveness.
-
-### Deploying to gh-pages
-
-Build contains deploy gem, so just run middleman deploy in the console and a static site will deploy to relative gh-pages branch.
-
-##### References
-
-[middleman github](https://github.com/middleman/middleman)
-
-[middleman docs](http://middlemanapp.com/advanced/rack-middleware/)
-
-[middleman 12devs post](http://12devs.co.uk/articles/204/)
-
-#### Node users: Similar functionality as above using Grunt coming soon
 
 ### Contribute
 
