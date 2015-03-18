@@ -1,7 +1,6 @@
 <%= partial "head" %>
 
-<body class="<%= @body_class %>">
-
+<body class="<%= current_page.data.body_class %>">
   <%= partial "style-header" %>
 
   <section role="main">

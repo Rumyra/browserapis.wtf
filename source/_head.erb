@@ -17,9 +17,9 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="author" content="Ruth John (@rumyra) for The Lab @ O2">
   <meta name="dcterms.rightsHolder" content="Built by The Lab, O2, United Kingdom, 2015">
-  <meta name="keywords" content="<%= @keywords %>">
-  <meta name="description" content="<%= @description %>">
-  <title><%= @title %></title>
+  <meta name="keywords" content="<%= current_page.data.keywords %>">
+  <meta name="description" content="<%= current_page.data.description %>">
+  <title><%= current_page.data.title %></title>
 
   <!--Stylesheets (include as necessary)-->
   <!--[if lte IE 9]>
