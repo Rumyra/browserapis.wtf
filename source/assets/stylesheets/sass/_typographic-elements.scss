@@ -1,0 +1,150 @@
+//CONTENTS
+
+// 1. Headers
+// 2. Paragraphs
+// 3. Inline Formatting
+// 4. Links
+// 5. Block Level Text Elements
+// 	5.1. lists
+// 	5.2. address, time
+// 	5.3. quotes
+// 	5.4. code
+
+// 0. Vars, mixins and extends
+$highlightTextBkgrndColour: transparentize($primaryColour,0.8) !default;
+$insertedTextBkgrndColour: transparentize($primaryColour,0.8) !default;
+$blockquoteBkgrndColour: transparentize($primaryColour,0.8) !default;
+
+$primaryLinkColour: $primaryColour !default;
+$primaryLinkHoverColour: darken($primaryColour,20%) !default;
+
+$blockLinkColour:$white !default;
+
+//1. HEADERS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+header {}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $verticalSpace/2;
+  font-weight: normal;
+  line-height: $headerLineHeight;
+}
+h1, h2, h3, h4 { font-family: $headerFont; }
+h1 { font-size: $fontSize*2.6; }
+h2 { font-size: $fontSize*2.2; }
+h3 { font-size:$fontSize*1.9; }
+h4 { font-size:$fontSize*1.6; }
+h5 { font-size:$fontSize*1.4; }
+h6 { font-size:$fontSize*1.2; }
+
+//2. PARAGRAPHS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p {
+	margin: $verticalSpace/2 0px;
+	font-size: $fontSize;
+  line-height: $lineHeight;
+}
+.lede, p.lede {
+  font-size: $fontSize*1.2;
+}
+.feature-text {
+  font-weight: bold;
+  font-style: italic;
+}
+
+//3. INLINE FORMATTING~~~~~~~~~~~~~~~~~~~~~~~~
+strong, b { font-weight: bold; }
+em, i, dfn, var { font-style: italic; }
+dfn, abbr, abbr[title] { border-bottom: 1px dotted;}
+ins, mark {padding:0px $gutter/6;}
+ins {
+	background-color: $insertedTextBkgrndColour;
+  text-decoration: none;
+}
+small { font-size: 84%; }
+del { text-decoration: line-through; }
+mark { background-color: $highlightTextBkgrndColour; }
+kbd, code, samp, pre { font-family: monospace; font-size: 120%; }
+/*Prevents `sub` and `sup` affecting `line-height` in all browsers.*/
+sub, sup {
+	position: relative;
+	font-size: 84%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+/*changing direction of text dependent on language*/
+[dir="ltr"] bdi { direction: rtl; unicode-bidi: bidi-override; }
+[dir="rtl"] bdi { direction: ltr; unicode-bidi: bidi-override; }
+
+//4. LINKS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+a {
+  border-bottom: 2px solid $primaryLinkColour;
+  font-weight: normal;
+  font-size: $fontSize;
+	color: $primaryLinkColour;
+  text-decoration: none;
+}
+// normalise font size and remove underline for headers
+p a, address a, ul a, ol a, dl a, menu a { font-size: 100%; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border: none; font-size: 100%; }
+
+a:hover, a:active, a:visited {
+  border-bottom-width: 0px;
+  color: $primaryLinkHoverColour;
+}
+a:focus { outline: thin dotted; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: $primaryLinkHoverColour; }
+
+
+//5. BLOCK LEVEL TEXT ELEMENTS~~~~~~~~~~~~~~~~~~~~
+
+//5.1. lists, navs and menus
+ol, ul, dl, menu[type="list"] { margin: $verticalSpace $gutter*2; }
+ol { list-style: lower-roman; }
+li, dt, dd {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+dt { font-weight: bold; }
+li, dl > dd {
+  margin: $verticalSpace/2 0px;
+  padding-left: $gutter/2;
+}
+
+//5.2. Address & Time
+address, time {
+	display: block;
+	margin: $verticalSpace 0px;
+}
+//5.3. Quotes
+q {}
+blockquote {
+  margin: $verticalSpace $gutter;
+  padding: $verticalSpace $gutter;
+  background-color: $blockquoteBkgrndColour;
+  quotes:'"';
+  
+  &:before {
+  	float: left;
+  	content:'“';
+    font-size: $fontSize*3;
+  }
+  &:after {
+		content: attr(cite);
+		display: block;
+    font-size: 84%;
+		text-align: right;
+  }
+}
+
+//5.4. Basic styling, see _prism.scss for colours etc... Code -> NB see 3. for <code> */
+pre {
+	margin: $verticalSpace $gutter;
+  padding: $verticalSpace $gutter;
+  background-color:$black;
+  font-size: 100%;
+	color: $white;
+  line-height: $lineHeight;
+  @include word-wrap;
+	
+	code { background: none; }
+}

@@ -1,0 +1,209 @@
+//CONTENTS
+
+// 0. Vars, mixins & extends
+// 1. Navs
+//     1.1 Simple navs (without list element)
+//      1.1.1 Horizontal
+//      1.1.2 Vertical
+//     1.2 Block navs (with list elements & sub nav)
+//      1.2.1 Horizontal
+//      1.2.2 Vertical
+//      1.2.2 Sub nav
+//     1.3 Menu icon on small screens
+// 2. Breadcrumbs
+// 3. Pagination
+
+// LIST STYLES
+$navSeparatorColour: $borderColour !default;
+$navBorderColour: $borderColour !default;
+$navBackgroundColour: $primaryBackgroundColour !default;
+
+$blockNavBackgroundColour: $tertiaryBackgroundColour !default;
+$blockNavHoverColour: darken($blockNavBackgroundColour, 20%) !default;
+$blockNavTextColour: $alternateFontColour !default;
+
+$subNavBackgroundColour: $primaryBackgroundColour !default;
+$subNavHoverColour: $secondaryBackgroundColour !default;
+$subNavTextColour: $tertiaryColour !default;
+
+$paginationBlockActiveBackground: $secondaryBackgroundColour !default;
+
+@mixin clearListStyles() {
+  margin: 0px; padding: 0px;
+  border: none; outline: none;
+  list-style: none;
+  li {
+    margin: 0px; padding: 0px;
+  }
+}
+
+// 1. NAVS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 1.1 Simple navs (without list elements)
+// 1.1.1 Horizontal
+nav {
+  position: relative;
+  li {
+    display: inline-block;
+    position: relative;
+  }
+  a {
+    display: inline-block;
+    padding: $verticalSpace/2 $gutter;
+    background-color: $navBackgroundColour;
+    border: 2px solid $navSeparatorColour;
+    border-width: 0px 2px 0px 0px;
+  }
+  @include at-least($screenMedium) {
+    li:hover .nav-sub { display: block; }
+  }
+}
+// 1.1.2 Vertical
+.nav-vertical {
+  width: 33%;
+  a {
+    display: block;
+    border-width: 2px 0px 0px;
+    &:last-child, &:last-child:hover {border-width: 2px 0px;}
+  }
+}
+
+// 1.2 Block navs (with list elements & sub nav)
+/*remove list styling for lists in nav*/
+nav ul, nav ol { @include clearListStyles; }
+// 1.2.1 Horizontal
+.nav-block {
+  ul, ol {
+    background-color: $blockNavBackgroundColour;
+  }
+  a {
+    display: block;
+    border-right-width: 0px;
+    background-color: $blockNavBackgroundColour;
+    color: $blockNavTextColour;
+    &:hover { background-color: $blockNavHoverColour; }
+  }
+
+}
+// 1.2.2 Vertical
+.nav-block-vertical {
+  @extend .nav-block;
+  ul, ol { background-color: transparent; }
+  li {
+    display: block;
+    margin-bottom: $verticalSpace/4;
+  }
+  a {
+    background-color: $blockNavBackgroundColour;
+  }
+}
+
+// 1.2.3 Sub Nav
+.nav-sub {
+  display: none;
+  position: absolute;
+  left: -2px; top: $verticalSpace*1.8;
+  border: 2px solid $navBorderColour;
+  ul, ol { background-color: $subNavBackgroundColour; }
+  a {
+    display: block;
+    background-color: $subNavBackgroundColour;
+    border-width: 0px;
+    color: $subNavTextColour;
+    &:hover { background-color: $subNavHoverColour; }
+  } 
+}
+
+// remove show on hover styling for vertical navs
+.nav-vertical, .nav-block-vertical {
+  .nav-sub {
+    display: block;
+    position: static;
+    border-width: 0px;
+  }
+}
+
+// 1.3 Small screen nav menu icon
+.nav-toggle {
+  @extend .icon-make;
+  @extend .i-menu;
+  @include at-least($screenMedium) { display: none; }
+}
+.nav-block, .nav-block-vertical {
+  .nav-toggle {
+    &:before {
+      padding: 8px 12px;
+      background-color: $blockNavBackgroundColour;
+      color: $blockNavTextColour;
+    }
+    &:hover:before {
+      background-color: $blockNavHoverColour;
+      color: $blockNavTextColour;
+    }
+  }
+}
+@include until($screenMedium) {
+  nav {
+    width: 33%;
+    ul {
+      position: absolute;
+      display: none;
+      &.nav-show { display: block; }
+    }
+    li { display: block; }
+    a {
+      display: block;
+      border-width: 2px 0px 0px;
+    }
+  }
+}
+@include until($screenSmall) { nav {width:50%} }
+
+// 2 Breadcrumbs
+.nav-breadcrumb {
+  li{
+    &:not(:last-child):after{ content: ">" }
+    a, span { padding: $verticalSpace/2 $gutter/2 $verticalSpace/2 $gutter;}
+    a { border-width: 0px; }
+  }
+}
+
+// 3 Pagination
+.nav-pagination {
+  li {
+    a { border-width: 0px; }
+
+    &:first-child a:before { padding-right: $gutter/3; content: "|<<" }
+    &:last-child a:after { padding-left: $gutter/3; content: ">>|" }
+    a[rel*="prev"]:before { padding-right: $gutter/3; content: "<" }
+    a[rel*="next"]:after { padding-left: $gutter/3; content: ">" }
+  }
+}
+
+// 3.1 Block Pagination
+.nav-pagination-block {
+  @extend .nav-pagination;
+  li {
+    margin-right: $verticalSpace/2;
+    a {
+      background-color: $blockNavBackgroundColour;
+      color: $blockNavTextColour;
+      &:hover { background-color: $blockNavHoverColour; }
+    }
+    span {
+      display: inline-block;
+      padding: $verticalSpace/2 $gutter;
+      background-color: $paginationBlockActiveBackground;
+    }
+  }
+}
+
+/*2. MENUS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+menu {}
+menu[type="list"] {}
+menu[type="toolbar"] {list-style:none;}
+menu[type="toolbar"] button {
+	background:none;
+	border:4px solid $lightGrey;
+	padding:3px; margin:0px;
+}
+menu[type="context"] {}

@@ -1,0 +1,140 @@
+//CONTENTS
+
+//1. Colours
+//    1.1 Colour palette
+//    1.2 Abstracted colour variables
+//2. Typography
+//    2.1 Mixins & extends
+//    2.2 Font imports & settings
+//3. Simple Spacing
+//4. Breakpoints
+//5. Helper mixins
+
+// 1. COLOURS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 1.1 Colour palette:
+// Amend for your own palette. It's fine to rename vars - abstracting of these is in the next section (1.2) so updating that will update all other files.
+$blue: #2368db;
+$purple: #9e3f9e;
+$red: #db183c;
+$orange: #e97f02;
+$yellow: #f8ca00;
+$green: #31a33e;
+
+$grey: desaturate($purple, 95%);
+$darkGrey: darken($grey, 20%);
+$lightGrey: lighten($grey, 20%);
+$extraLightGrey: lighten($grey, 40%);
+
+$white: darken(lighten($grey,100%),1%);
+$black: lighten(darken($grey,100%),5%);
+
+//1.2 Abstracted colour variables:
+// For use within other sass files. Usually specified for each element at the beginning of it's specific sass file. E.g. $primaryButtonColour:$primaryColour;
+$primaryColour: $purple !default;
+$secondaryColour: $red !default;
+$tertiaryColour: $grey !default;
+// quaternary, quinary, senary
+
+$primaryBackgroundColour: $white !default;
+$secondaryBackgroundColour: $extraLightGrey !default;
+$tertiaryBackgroundColour: $lightGrey !default;
+
+$borderColour: $lightGrey !default;
+
+$successColour: $green !default;
+$errorColour: $red !default;
+
+$primaryFontColour: $black !default;
+$alternateFontColour: $white !default;
+
+
+//2. TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 2.1 Mixins & extends
+// For all filetypes
+/*The following is taken from Bourbon: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/css3/_font-face.scss*/
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    @if $asset-pipeline == true {
+      src: font-url('#{$file-path}.eot');
+      src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+           font-url('#{$file-path}.woff')                format('woff'),
+           font-url('#{$file-path}.otf')                format('opentype'),
+           font-url('#{$file-path}.ttf')                 format('truetype'),
+           font-url('#{$file-path}.svg##{$font-family}') format('svg');
+    } @else {
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+           url('#{$file-path}.woff')                     format('woff'),
+           url('#{$file-path}.otf')                     format('opentype'),
+           url('#{$file-path}.ttf')                      format('truetype'),
+           url('#{$file-path}.svg##{$font-family}')      format('svg');
+    }
+  }
+}
+
+// wrap words
+@mixin word-wrap {
+	white-space:pre;
+	white-space:pre-wrap;
+	word-wrap:break-word;
+}
+// remove text from elements, whilst keeping it in the dom
+.hide-font {color:transparent; font-size:0px; text-transform:none; text-decoration:none;}
+
+//2.2 Font imports & settings
+@include font-face('Font Awesome', '../fonts/fontAwesome/fontawesome-webfont');
+
+$font:'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$fontSize:1em !default;
+$lineHeight:1.5 !default;
+
+$headerFont:'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$headerLineHeight:1.1;
+
+$iconFont:'Font Awesome', monospace !default;
+$iconFontSize:20px !default;
+$iconLineHeight:25px !default;
+
+
+// 3. SIMPLE SPACING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// top and bottom space
+$verticalSpace:1.5em !default;
+// left and right space
+$gutter:1.5em !default;
+
+
+//4. BREAKPOINTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*The following are taken from Brandon Mathis - http://codepen.io/imathis/pen/BDzcI*/
+@mixin at-least($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content 
+  }
+}
+
+@mixin until($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content 
+  }
+}
+
+// use with breakpoint mixin like @include until($small) or @include at-least($screenLarge)
+$screenSmall:480px;
+$screenMedium:640px;
+$screenLarge:860px;
+$screenXlarge:1280px;
+
+//5. HELPER MIXINS ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// vendor prefixing
+@mixin simple-vendor-prefix($name, $argument) {
+  -webkit-#{$name}: $argument;
+  -ms-#{$name}: $argument;
+  -moz-#{$name}: $argument;
+  -o-#{$name}: $argument;
+  #{$name}: $argument;
+}
+

@@ -1,0 +1,26 @@
+/*media*/
+audio,
+video,
+img,
+.media-feature,
+.media-feature audio,
+.media-feature video,
+.media-feature img {
+	width: 100%; max-width: 100%;
+	height: auto;
+}
+
+figure {
+	audio, video, img	{ margin-bottom: $verticalSpace/2; }
+}
+
+figure:not(.media-feature) {
+	audio, video, img { width: 50%; max-width: 50%; }
+}
+
+figcaption { font-style: italic; }
+img { @include simple-vendor-prefix(box-sizing,border-box); }
+audio {}
+video {}
+/*Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices.*/
+audio:not([controls]) { display: none; height: 0; }

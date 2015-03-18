@@ -1,0 +1,18 @@
+<%= partial "head" %>
+
+<body class="<%= @body_class %>">
+
+  <%= partial "style-header" %>
+
+  <section role="main">
+
+      <%= yield %>
+
+  </section>
+
+  <%= partial "footer" %>
+
+  <%= partial "style-scripts" %>
+
+</body>
+</html>

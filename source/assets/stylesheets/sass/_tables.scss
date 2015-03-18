@@ -1,0 +1,54 @@
+/*
+CONTENTS
+
+0. Vars, mixins and extends
+1. Basic table
+2. Simple table
+
+*/
+
+// 0. Vars, mixins and extends
+$tableBorderColour: $secondaryBackgroundColour !default;
+$withRowStripingBorderColour: $borderColour !default;
+$rowStripingBackgroundColour: $secondaryBackgroundColour !default;
+
+$tableHeaderBorderColour:$primaryColour !default;
+$tableHeaderBackgroundColour:transparentize($primaryColour,0.8) !default;
+
+/*1. BASIC TABLE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+// tables still need 'cellspacing="0"' in the markup
+table {
+	width: 100%;
+	margin: $verticalSpace 0px;
+  border-collapse: collapse;
+	border-spacing: 0px;
+}
+caption { margin-bottom: $verticalSpace/2; }
+thead { background-color: $tableHeaderBackgroundColour; }
+tr:nth-child(2n) {
+	background-color: $rowStripingBackgroundColour;
+	border-color: $withRowStripingBorderColour;
+}
+th, td {
+	padding: $verticalSpace/2 $gutter;
+	font-size: $fontSize;
+	font-weight: normal;
+  text-align: left;
+}
+th {
+	border: 0px solid $tableHeaderBorderColour;
+	border-width: 2px 0px;
+}
+td {
+	border: 0px solid $withRowStripingBorderColour;
+	border-bottom-width: 2px;
+}
+
+// 2. Simple table
+.table-simple {
+	tr:nth-child(2n) {
+		background-color: transparent;
+		border-color: $tableBorderColour;
+	}
+	td { border-color: $tableBorderColour; }
+}

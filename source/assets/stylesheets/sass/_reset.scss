@@ -1,0 +1,30 @@
+//Yes this is a reset, the relevant normalize stuff can be found throughout the css, I've always found I've needed this, I have tried to build things without it - I like it, it's nice.
+
+//1. BLANKING --------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+header, hgroup, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, time,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+figure, figcaption, video, audio, img,
+fieldset, form, label, legend, input, button, select,
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, canvas, nav, footer, aside,
+figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+// legacy - for browsers who struggle with html5 elements
+section, article, aside, footer, nav, header, hgroup, details, figure, figcaption, summary { display: block; }
+audio, canvas, video { display: inline-block; }
+/*Prevents iOS text size adjust after orientation change, without disabling user zoom.*/
+html { -webkit-text-size-adjust: 100%; }
+// legacy support
+[hidden] { display: none; }
+// remember to define focus styles!
+:focus { outline: 0; }

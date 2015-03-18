@@ -1,0 +1,39 @@
+
+// THIS FILE PULLS IN ALL SCSS FILES WE USE
+// This is the file that gets compiled for use in your app.
+// 	If you create any extras (such as ui elements), create a file for them & add them in here.
+
+/* reset margins, padding, borders & outline. Sets HTML block elements, also includes a couple of bits of normalize.css */
+@import 'sass/_reset.scss';
+
+/* set colours, fonts, sizes & breakpoints */
+@import 'sass/_settings.scss';
+
+
+/* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* headers, paragraphs, lists, formatting etc... */
+@import 'sass/_typographic-elements.scss';
+
+/* forms */
+@import 'sass/_forms.scss';
+
+/* tables */
+@import 'sass/_tables.scss';
+
+/* images, audio, video, canvas etc... */
+@import 'sass/_media.scss';
+
+/* UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* buttons */
+@import 'sass/_buttons-icons.scss';
+
+/* navigation and menus */
+@import 'sass/_nav-menu.scss';
+
+/* html, body, header, footer & basic main layout */
+@import 'sass/_main-partials.scss';
+
+/* PAGE LAYOUTS */
+
+

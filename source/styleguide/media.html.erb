@@ -1,0 +1,106 @@
+<%
+@body_class = 'layout-sidebar media'
+
+@title = 'Media | Front End Framework'
+@keywords = 'The Lab, Media, Video, Audio, Image,'
+@description = 'Front End Framework for The Lab @ o2'
+%>
+
+<h2>Media</h2>
+<article class="element-copy">
+	<header id="images">
+		<h3>Images</h3>
+	</header>
+	<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_media.scss">_media.scss</a> for all the styles.</p>
+	<p>A simple include of an inline image goes thus:</p>
+	<section class="element-one">
+		<img src="http://placekitten.com/482/322" alt="A very cute kitten" />
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;img src="http://placekitten.com/482/322" alt="A very cute kitten" /></code></pre>
+	</section>
+	<p>However we now have a wonderful <code>figure</code> tag to wrap media in and give them a caption. If the alt text is a repeat of other text don't include it. (At widescreen setting media is displayed at 50% width).</p>
+	<section class="element-one">
+		<figure>
+      <img src="http://placekitten.com/482/322" />
+      <figcaption>A very cute kitten!</figcaption>
+    </figure>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;figure>
+	&lt;img src="http://placekitten.com/482/322" />
+	&lt;figcaption>A very cute kitten!&lt;/figcaption>
+&lt;/figure></code></pre>
+	</section>
+	<p>You may want to target certain media to make it more of a feature (bigger, flashing borders etc...). Use the <code>.media-feature</code> class.</p>
+	<section class="element-one">
+		<figure class="media-feature">
+      <img src="http://placekitten.com/482/322" />
+      <figcaption>A very cute kitten!</figcaption>
+    </figure>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;figure class="media-feature">
+	&lt;img src="http://placekitten.com/482/322" />
+	&lt;figcaption>A very cute kitten!&lt;/figcaption>
+&lt;/figure></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="audio">
+		<h3>Audio</h3>
+	</header>
+	<p>File types</p>
+	<section class="element-one">
+		<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls>
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls>
+	Your browser does not support the &lt;code>audio&lt;/code> element.
+&lt;/audio></code></pre>
+	</section>
+	<section class="element-one">
+		<audio src="foo.ogg" controls>
+      <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+      <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio src="foo.ogg" controls>
+	&lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+	&lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+&lt;/audio></code></pre>
+	</section>
+	<section class="element-one">
+		<audio controls="controls">
+      Your browser does not support the <code>audio</code> element.
+      <source src="foo.wav" type="audio/wav">
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio controls="controls">
+	Your browser does not support the &lt;code>audio&lt;/code> element.
+	&lt;source src="foo.wav" type="audio/wav">
+&lt;/audio></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="video">
+		<h3>Video</h3>
+	</header>
+	<p>Here are 2 examples of embedding video. File types</p>
+	<section class="element-one">
+		<video src="videofile.ogg" poster="posterimage.jpg" controls>
+      Sorry, your browser doesn't support embedded videos,
+      but don't worry, you can <a href="videofile.ogg">download it</a>
+      and watch it with your favorite video player!
+    </video>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;video src="videofile.ogg" poster="posterimage.jpg" controls>
+	Sorry, your browser doesn't support embedded videos,
+	but don't worry, you can &lt;a href="videofile.ogg">download it&lt;/a>
+	and watch it with your favorite video player!
+&lt;/video></code></pre>
+	</section>
+	<section class="element-one">
+		<video src="foo.ogg" controls="controls">
+      <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+      <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+    </video>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;video src="foo.ogg" controls="controls">
+	&lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+	&lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+&lt;/video></code></pre>
+	</section>
+</article>

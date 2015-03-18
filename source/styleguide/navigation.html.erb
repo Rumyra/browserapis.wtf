@@ -1,0 +1,218 @@
+<%
+@body_class = 'layout-sidebar navigation'
+
+@title = 'Navigation | Front End Framework'
+@keywords = 'The Lab, Navigation, Breadcrumbs, Pagination, Tabs, Menus'
+@description = 'Front End Framework for The Lab @ o2'
+%>
+
+<h2>Navigations and Menus</h2>
+
+<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_nav-menu.scss">_nav-menu.scss</a> for all the styles.</p>
+
+<article class="element-copy">
+  <header id="navigation">
+    <h3>Navigation</h3>
+  </header>
+
+  <p>Contrary to popular belief the navigation element doesn't need to contain a list. (N.B. The HTML empty comments in-between nav items are to combat the inline-block whitespace issue).</p>
+  <section class="element-one">
+    <nav role="navigation">
+      <a href="#">Nav item one</a><!--
+      --><a href="#">Second item</a><!--
+      --><a href="#">Nav item 3</a><!--
+      --><a href="#">Last item</a>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation">
+  &lt;a href="#">Nav item one&lt;/a>&lt;!--
+  -->&lt;a href="#">Second item&lt;/a>&lt;!--
+  -->&lt;a href="#">Nav item 3&lt;/a>&lt;!--
+  -->&lt;a href="#">Last item&lt;/a>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav role="navigation" class="nav-vertical">
+        <a href="#">Nav item one</a>
+        <a href="#">Second item</a>
+        <a href="#">Nav item 3</a>
+        <a href="#">Last item</a>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-vertical">
+  &lt;a href="#">Nav item one&lt;/a>
+  &lt;a href="#">Second item&lt;/a>
+  &lt;a href="#">Nav item 3&lt;/a>
+  &lt;a href="#">Last item&lt;/a>
+&lt;/nav></code></pre>
+  </section>
+
+  <p>You can of course use a list, nothing is stopping you. It's super helpful for nested navigations. Note the <code>.nav-sub</code> class for these.</p>
+
+  <p>There are also some optional add ons here. Note the <code>button</code> to hide show the nav on small screens. Also there's a <code>.nav-block</code> class added for an alternative type of styling.</p>
+  <section class="element-one">
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="#">Nav Item One</a></li><!--
+        --><li>
+          <a href="#">With Sub Nav</a>
+            <nav role="navigation" class="nav-sub">
+              <a href="#">Sub Nav 1</a>
+              <a href="#">Two Sub Nav</a>
+              <a href="#">Third item</a>
+              <a href="#">4th nav</a>
+              <a href="#">Sub Nav 5</a>
+            </nav>
+        </li><!--
+        --><li><a href="#">Another Item</a></li><!--
+        --><li><a href="#">The Last Nav Item</a></li>
+      </ul>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-block">
+  &lt;button class="nav-toggle">Show/Hide Nav&lt;/button>
+  &lt;ul>
+    &lt;li>&lt;a href="#">Nav Item One&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>
+      &lt;a href="#">With Sub Nav&lt;/a>
+        &lt;nav role="navigation" class="nav-sub">
+          &lt;a href="#">Sub Nav 1&lt;/a>
+          &lt;a href="#">Two Sub Nav&lt;/a>
+          &lt;a href="#">Third item&lt;/a>
+          &lt;a href="#">4th nav&lt;/a>
+          &lt;a href="#">Sub Nav 5&lt;/a>
+        &lt;/nav>
+    &lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Another Item&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">The Last Nav Item&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav role="navigation" class="nav-block-vertical">
+      <ul>
+        <li><a href="#">Nav Item One</a></li>
+        <li>
+          <a href="#">With Sub Nav</a>
+            <nav role="navigation" class="nav-sub">
+              <a href="#">Sub Nav 1</a>
+              <a href="#">Two Sub Nav</a>
+              <a href="#">Third item</a>
+              <a href="#">4th nav</a>
+              <a href="#">Sub Nav 5</a>
+            </nav>
+        </li>
+        <li><a href="#">Another Item</a></li>
+        <li><a href="#">The Last Nav Item</a></li>
+      </ul>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-block-vertical">
+  &lt;ul>
+    &lt;li>&lt;a href="#">Nav Item One&lt;/a>&lt;/li>
+    &lt;li>
+      &lt;a href="#">With Sub Nav&lt;/a>
+        &lt;nav role="navigation" class="nav-sub">
+          &lt;a href="#">Sub Nav 1&lt;/a>
+          &lt;a href="#">Two Sub Nav&lt;/a>
+          &lt;a href="#">Third item&lt;/a>
+          &lt;a href="#">4th nav&lt;/a>
+          &lt;a href="#">Sub Nav 5&lt;/a>
+        &lt;/nav>
+    &lt;/li>
+    &lt;li>&lt;a href="#">Another Item&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">The Last Nav Item&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="breadcrumbs">
+    <h3>Breadcrumbs</h3>
+  </header>
+  <section class="element-one">
+    <nav class="nav-breadcrumb">
+      <ol>
+        <li><a href="#">Top Level</a></li><!--
+        --><li><a href="#">Second Level</a></li><!--
+        --><li><span>Third Level</span></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-breadcrumb">
+  &lt;ol>
+    &lt;li>&lt;a href="#">Top Level&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Second Level&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span>Third Level&lt;/span>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="pagination">
+    <h3>Pagination</h3>
+  </header>
+  <section class="element-one">
+    <nav class="nav-pagination">
+      <ol>
+        <li><a href="#">First</a></li><!--
+        --><li><a href="#" rel="prev">Previous</a></li><!--
+        --><li><a href="#">1</a></li><!--
+        --><li><span title="Current Page">2</span></li><!--
+        --><li><a href="#">3</a></li><!--
+        --><li><a href="#" rel="next">Next</a></li><!--
+        --><li><a href="#">Last</a></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-pagination">
+  &lt;ol>
+    &lt;li>&lt;a href="#">First&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="prev">Previous&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">1&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span title="Current Page">2&lt;/span>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">3&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="next">Next&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Last&lt;/a>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav class="nav-pagination-block">
+      <ol>
+        <li><a href="#">First</a></li><!--
+        --><li><a href="#" rel="prev">Previous</a></li><!--
+        --><li><a href="#">1</a></li><!--
+        --><li><span title="Current Page">2</span></li><!--
+        --><li><a href="#">3</a></li><!--
+        --><li><a href="#" rel="next">Next</a></li><!--
+        --><li><a href="#">Last</a></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-pagination-block">
+  &lt;ol>
+    &lt;li>&lt;a href="#">First&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="prev">Previous&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">1&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span title="Current Page">2&lt;/span>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">3&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="next">Next&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Last&lt;/a>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<!--   <article class="element-copy">
+    <header id="images">
+      <h3>Messages</h3>
+    </header>
+    <section class="element-one">
+
+      <pre class="language-markup"><code></code></pre>
+      <button class="clipboard">Copy to Clipboard</button>
+    </section>
+  </article> -->

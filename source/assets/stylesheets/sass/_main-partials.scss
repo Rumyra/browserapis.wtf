@@ -1,0 +1,99 @@
+//CONTENTS
+
+// 1. html & body
+// 2. Site structure
+//     2.1 Main header, aside and footer
+//     2.2 Main content container
+
+
+// 1. HTML & BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+html { background-color: $primaryBackgroundColour; }
+body {
+  width: 100%;
+  overflow: auto;
+  font-family: $font;
+  font-size: 100%;
+  font-color: $primaryFontColour;
+  line-height: 1;
+  @include at-least($screenXlarge) { font-size: 112%; }
+  @include until($screenMedium) { font-size: 90%; }
+  @include until($screenSmall) { font-size: 84%; }
+}
+
+// 2. SITE STRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 2.1 Main header, aside & footer
+// Default layout is full width add .layout-sidebar for large screens to have side nav
+header[role="banner"],
+body > aside,
+body > footer {
+  padding: $verticalSpace $gutter;
+  @include simple-vendor-prefix(box-sizing,border-box);
+}
+
+header[role="banner"] {
+  h1 {}
+}
+
+body > footer {
+  width: 100%;
+  padding: $verticalSpace/2 $gutter 0px;
+  @include simple-vendor-prefix(box-sizing,border-box);
+  p, nav {
+      display: inline-block;
+      width: 50%;
+      @include simple-vendor-prefix(box-sizing,border-box);
+  }
+  nav {
+    text-align: right;
+    a {
+      margin-left: $gutter/2;
+      border-width: 0px;
+    }
+  }
+}
+
+/*2.2 Main content container*/
+section[role="main"] {
+  width: 100%;
+  padding: $verticalSpace $gutter;
+  @include simple-vendor-prefix(box-sizing,border-box);
+}
+
+
+@include at-least($screenLarge) {
+
+  .layout-sidebar {
+    header[role="banner"],
+    body > aside {
+      width: 32%;
+      float: left;
+      text-align: right;
+    }
+    header[role="banner"] {
+      nav {
+        //due to @extends not being allowed within @includes this is just a copy from nav-block-vertical.
+        & > ul {
+          background-color: transparent;
+          & > li > a {
+            background-color: $blockNavBackgroundColour;
+            &:hover { background-color: darken($blockNavBackgroundColour, 20%); }
+          }
+        }
+        li {
+          display: block;
+          margin-bottom: $verticalSpace/4;
+        }
+        .nav-sub {
+          display: block;
+          position: static;
+          border-width: 0px;
+        }
+      }
+    }
+
+    section[role="main"] {
+      width: 67.5%;
+      float: right;
+    }
+  }
+}

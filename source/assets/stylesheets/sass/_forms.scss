@@ -1,0 +1,178 @@
+//CONTENTS
+
+//0. Vars, mixins & extends
+
+//1. Main containers & instructions
+//  1.1 Form, fieldset & legend
+//  1.2 Instructions
+//  1.3 Form field containers
+//2. Labels & inputs
+//  2.1 Basic styling
+//  2.2 Label & input specifics
+//  2.3 Special input types
+//  2.4 Button style inputs
+//  2.5 Focus styles
+//  2.6 Required styles
+//3. Feedback
+
+
+// 0. Vars, mixins & extends~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$inputBkgrndColour: white !default;
+$inputBorderColour: $borderColour !default;
+$activeInputBorderColour: $primaryColour !default;
+$formErrorColour: $errorColour !default;
+$formSuccessColour: $successColour !default;
+$formSeparatorColour: $borderColour !default;
+
+
+// 1. Main containers & instructions ~~~~~~~~~~~~~~~~~~~
+// 1.1 Form, fieldset & legend
+form { width: 100%; }
+.form-small {
+  @include at-least($screenLarge) {
+    width: 50%;
+    margin: 0px auto;
+  }
+}
+fieldset { margin-bottom: $verticalSpace; }
+legend {
+  display: none;
+  font-size: $fontSize*1.4;
+}
+
+// 1.2 Instructions
+.form-instructions {
+  @include at-least($screenLarge) { width: 75%; }
+  padding: $verticalSpace/4 0px;
+  border: 2px solid $formSeparatorColour;
+  border-width: 2px 0px;
+}
+
+// 1.3 Form field containers
+.form-field {
+  width: 100%;
+  @include at-least($screenLarge) {
+    width:48%; float:left;
+    &:nth-of-type(2n-1) { margin-right: 4%; }
+  }
+}
+.form-small .form-field {
+  @include at-least($screenLarge) {
+    width: 100%; float: none; margin-right: 0px;
+  }
+}
+
+// 2. Labels & inputs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 2.1 Basic styling
+label, input, select, textarea, button {
+	display: inline-block;
+  @include simple-vendor-prefix(box-sizing,border-box);
+  vertical-align: baseline;
+	margin: $verticalSpace/2 0px $verticalSpace;
+	font-family: $font;
+  font-size: $fontSize;
+  @include until($screenLarge) {
+    margin: $verticalSpace/4 0px $verticalSpace/2;
+  }
+}
+/*Addresses Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.*/ button, input { line-height: normal; }
+// 2.2 Label & input specifics
+label {
+  width: 100%;
+  margin-bottom: $verticalSpace/2;
+  @include until($screenLarge) { margin-bottom: $verticalSpace/4; }
+}
+input, select, textarea {
+  width: 100%;
+	padding: $verticalSpace/4 $verticalSpace/3; 
+	background-color: $inputBkgrndColour;
+  border: 3px solid $inputBorderColour;
+  border-radius: 1px;
+}
+select option { padding:$verticalSpace/2 $verticalSpace/1.5; }
+textarea { vertical-align: top; }
+table input, table select, table textarea { margin: 0px; }
+
+// 2.3 Special input types
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="file"] {}
+input[type="range"] { margin-bottom: $verticalSpace*1.5; }
+.input-radio {
+  input {
+    width: 10%;
+    margin-bottom: $verticalSpace/2;
+    @include until($screenLarge) { width:6%; }
+  }
+  input:last-of-type { margin-bottom: $verticalSpace; }
+  span {
+    display: inline-block;
+    width: 87%;
+    @include until($screenLarge) {
+      width:91%;
+      font-size: $fontSize*0.9;
+    }
+  }
+}
+.input-checkbox {
+  label {
+    float: right;
+    width: 91%;
+    @include until($screenLarge) { width: 93%; }}
+  input {
+    width: 8%;
+    @include until($screenLarge) { width: 6%; }}
+}
+.input-date, .input-colour, .input-number {
+  width: 23%;
+  margin-right: 2%;
+  @include until($screenLarge) { width: 40%; }
+  @include until($screenMedium) { width: 50%; }
+}
+input[type=color] {
+  width: 100px;
+  height: 100px
+}
+.input-range-number {
+  width: 100%;
+  input[type="range"] {
+    width: 48%;
+    margin-right: $gutter;
+  }
+  input[type="number"] { width: 10%; }
+}
+// 2.4 Button style inputs (for more see buttons-icons.scss)
+input[type="submit"], input[type="reset"] { width: 30%; }
+input[type="reset"] { float: left; }
+input[type="submit"] { float: right; }
+
+// 2.5 Focus styles
+input:focus,
+select:focus,
+textarea:focus { border-color: $activeInputBorderColour; }
+// 2.6 Required styles
+.input-required label:after {
+  display: inline-block;
+  padding-left: $gutter/2;
+  content: '*';
+}
+
+//3. Form feedback ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.input-error input,
+.input-error select,
+.input-error textarea { border-color: $formErrorColour; }
+
+.input-success input,
+.input-success select,
+.input-success textarea { border-color: $formSuccessColour; }
+
+.form-error, .form-success {
+  padding: $verticalSpace/2 $gutter;
+}
+.form-error {
+  border: 2px solid $formErrorColour;
+  color: $formErrorColour;
+}
+.form-success {
+  border: 2px solid $formSuccessColour;
+  color: $formSuccessColour;
+}

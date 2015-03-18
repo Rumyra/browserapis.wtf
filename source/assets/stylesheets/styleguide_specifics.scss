@@ -1,0 +1,40 @@
+/*THIRD PARTY EXTRAS~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*prism - code highlighting*/
+@import 'sass/_prism.scss';
+
+
+// This file contains specifics about the White Paper web front end - you shouldn't need this in your projects
+.element-copy {
+  overflow: hidden;
+  pre {
+    position: relative;
+    max-height: 400px;
+    .i-copy {
+      position: absolute;
+      top: 8px; right: 8px;
+      margin:0px;
+      padding: 0.5em 1em;
+      &:hover,
+      &:active,
+      &.zeroclipboard-is-hover,
+      &.zeroclipboard-is-active {
+        background-color: lighten(#900fcf, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+  .form-field { float: none; }
+  form .form-field { float: left; }
+  input[type="submit"], input[type="reset"] { float: none; }
+  
+}
+
+.button-dif {
+	background-color: hsla(337,80%,40%,1);
+  &:hover {
+      background-color: darken(hsla(337,80%,40%,1),10%);
+  }}
+
+.example-icons {
+  span { display:inline-block; margin:12px 24px 12px 0px;}
+}
