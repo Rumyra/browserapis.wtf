@@ -11,7 +11,7 @@ I'm a Middleman site, the standard setup applies:
 bundle install
 # Run the Middleman server, watching for any changes
 bundle exec middleman
-
+```
 
 ## Deployment
 
