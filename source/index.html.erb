@@ -1,23 +1,14 @@
 ---
 body_class: index
-title: Home | Front End Framework
-keywords: The Lab, Front End Framework
-description: Front End Framework for The Lab @ o2
+title: Home | Web APIs
+keywords: Web, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs, Browser APIs
+description: A website showcasing all the new web APIs, their code examples and further details about them.
 ---
 
-<h2>Welcome to the White Paper</h2>
-
-<p>This was built to be built upon, to not dictate design to you, but to give you a starting point when beginning web builds, to get rid of that '*sigh* I have to start all over again' feeling.</p>
-
-<p class="lede">View the <a href="https://github.com/o2Labs/White-Paper">code on Github here</a>.</p>
-
-<p><b>The problem:</b> I always find myself either repeating a lot of ground work for every web build I do when I start it, or copying and pasting my last web build and pulling stuff out, so I don't have to do lots of initial repetition. It can be quite time consuming to say the least. <b>The solution:</b> All the basic ground work for a build in a set of files I can pull down or copy and hit the ground running with.</p>
-
-<p><b>The problem:</b> Keeping basic HTML elements and components style in one place, integrated within the build, but also separate from the sites 'real' pages. A place were modular elements can be added, found via reference and easier duplicate within the site. <b>The solution:</b> An area of the starting file build which contains a styleguide, an easy access reference for styling of elements and components.</p>
-
-<p><b>The problem:</b> Setting front end coding standards for the team. This can be marking up HTML, structuring Sass files, using consistent design patterns. <b>The solution:</b> A set of files that show the standards, that are also used as part of the build, can act as a reference and starting point (and sometimes aid learning too). With HTML that's copy and pastable, structured Sass files and the beginnings of common JavaScript functions.</p>
-
-<p><b>The problem:</b> Having to build quickly, getting something into the browser as soon as possible on a web project without too much fuss. Having the ability to wireframe within the browser without set up cost. <b>The solution:</b> A build that comes with minimal styling to make HTML look good, but not dictate any design, whilst content is thought through first and foremost.</p>
-
-<p class="lede">This is my solution, this is the White Paper. I've been creating this since I started here at The Lab a couple of years ago, it's gone through many an iteration, but has finally grown into something which I start all my projects with. Now's my time to share it. I felt strongly about open sourcing this, purely selfishly, as I can now use it for my personal projects too. Feel free to contribute, comment and help it grow :) - <a href="http://www.twitter.com/rumyra">Ruth</a></p>
-
+<ul>
+<% sitemap.find_resource_by_path('guidelines/index.html').children.each do |page| %>
+    <li>
+        <%= partial 'partials/objects/guideline', :locals => {:guideline => page} %>
+    </li>
+<% end %>
+</ul>
