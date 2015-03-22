@@ -19,8 +19,8 @@ with_layout :stylelayout do
   page "/styleguide/*"
 end
 
-page "guidelines/*", :layout => :guideline
-page "guidelines/index.html", :layout => :layout
+page "webapis/*", :layout => :webapi
+page "webapis/index.html", :layout => :layout
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {

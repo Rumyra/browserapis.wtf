@@ -6,9 +6,9 @@ description: A website showcasing all the new web APIs, their code examples and 
 ---
 
 <ul>
-<% sitemap.find_resource_by_path('guidelines/index.html').children.each do |page| %>
-    <li>
-        <%= partial 'partials/objects/guideline', :locals => {:guideline => page} %>
-    </li>
+<% sitemap.find_resource_by_path('webapis/index.html').children.each do |page| %>
+  <li>
+    <%= partial 'partials/objects/webapi', :locals => {:webapi => page} %>
+  </li>
 <% end %>
 </ul>
