@@ -33,10 +33,13 @@ page "webapis/index.html", :layout => :layout
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+set :markdown, :input => 'GFM'
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
+
+activate :syntax
 
 activate :deploy do |deploy|
   deploy.method = :git

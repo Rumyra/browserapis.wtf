@@ -9,6 +9,9 @@ links_other:
   'Title': http://example.com
 ---
 
-<pre class="language-javascript"><code>addEventListener('devicelight', function(event) {
+
+```js
+addEventListener('devicelight', function(event) {
   console.log(event.value);
-});</code></pre>
+});
+```
