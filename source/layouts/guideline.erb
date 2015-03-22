@@ -1,0 +1,29 @@
+<% wrap_layout :layout do %>
+
+<article>
+
+  <h2><%= current_page.data.title %></h2>
+  <h5><%= current_page.data.short_description %></h2>
+  
+  <%= yield %>
+
+  <section class="links-main">
+    <a href="<%= current_page.data.w3c_link %>"><%= current_page.data.w3c_status %></a>
+    <a href="<%= current_page.data.caniuse %>">Support on caniuse.com</a>
+    <a href="<%= current_page.data.mdn_docs %>">More info on MDN Docs</a>
+  </section>
+
+  <section class="links-other">
+    <% current_page.data.links_other.each do |title, url| %>
+      <li><%=link_to(title, url)%></li>
+    <% end %>
+    <!-- tutorials & other articles -->
+  </section>
+
+  <section class="links-examples">
+    <!-- demos & good uses of -->
+  </section>
+
+</article>
+
+<% end %>
