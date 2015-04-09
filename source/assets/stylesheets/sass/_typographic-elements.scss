@@ -29,11 +29,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, h2, h3, h4 { font-family: $headerFont; }
 h1 { font-size: $fontSize*2.6; }
-h2 { font-size: $fontSize*2.2; }
-h3 { font-size:$fontSize*1.9; }
-h4 { font-size:$fontSize*1.6; }
-h5 { font-size:$fontSize*1.4; }
-h6 { font-size:$fontSize*1.2; }
+h2 { font-size: $fontSize*2.1; }
+h3 { font-size: $fontSize*1.8; }
+h4 { font-size: $fontSize*1.5; }
+h5 { font-size: $fontSize*1.3; }
+h6 { font-size: $fontSize*1.2; }
 
 //2. PARAGRAPHS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 p {
@@ -86,6 +86,7 @@ a {
 // normalise font size and remove underline for headers
 p a, address a, ul a, ol a, dl a, menu a { font-size: 100%; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border: none; font-size: 100%; }
+h1 a { color: $primaryFontColour; }
 
 a:hover, a:active, a:visited {
   border-bottom-width: 0px;

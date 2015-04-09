@@ -1,4 +1,4 @@
-<article>
-  <h2><% link_to webapi.url do %><%=webapi.data.title%><% end %></h2>
+<a href="<%= webapi.url %>">
+  <h4><%=webapi.data.title%></h4>
   <p><%=webapi.data.short_description%></p>
-</article>
+</a>
