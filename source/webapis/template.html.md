@@ -1,5 +1,5 @@
 ---
-title: Ambient Light Event
+title: API Title Here
 short_description: Returns the lux value detected by the devices camera.
 w3c_status: W3C Editors Draft
 w3c_link: http://w3c.github.io/ambient-light/
