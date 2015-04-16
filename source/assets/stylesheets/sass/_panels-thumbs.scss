@@ -1,0 +1,28 @@
+$firstBorderColour: $primaryColour !default;
+$secondBorderColour: $secondaryColour !default;
+$thirdBorderColour: $tertiaryColour !default;
+
+.list-panel {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+  li {
+    padding: $verticalSpace/2 $gutter/2;
+    margin: $verticalSpace/2 $gutter/2;
+    width: 20%;
+    border-left: 6px solid $firstBorderColour;
+    &:nth-of-type(3n-1) { border-color: $secondBorderColour; }
+    &:nth-of-type(3n) { border-color: $thirdBorderColour; }
+    a {color: $primaryFontColour;}
+  }
+}

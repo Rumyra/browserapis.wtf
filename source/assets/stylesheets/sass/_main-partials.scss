@@ -13,7 +13,8 @@ body {
   overflow: auto;
   font-family: $font;
   font-size: 100%;
-  font-color: $primaryFontColour;
+  color: $primaryFontColour;
+  font-weight: 300;
   line-height: 1;
   @include at-least($screenXlarge) { font-size: 112%; }
   @include until($screenMedium) { font-size: 90%; }
@@ -26,17 +27,21 @@ body {
 header[role="banner"],
 body > aside,
 body > footer {
-  padding: $verticalSpace $gutter;
+  padding: $verticalSpace $gutter*2;
   @include simple-vendor-prefix(box-sizing,border-box);
 }
 
 header[role="banner"] {
-  h1 {}
+  overflow: hidden;
+  h1, div {
+    @include simple-vendor-prefix(box-sizing,border-box);
+    width:50%; float:left;
+  }
+  h1 {margin: $verticalSpace/4 0px;}
 }
 
 body > footer {
   width: 100%;
-  padding: $verticalSpace/2 $gutter 0px;
   @include simple-vendor-prefix(box-sizing,border-box);
   p, nav {
       display: inline-block;

@@ -5,10 +5,10 @@ keywords: Web, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs, Brow
 description: A website showcasing all the new web APIs, their code examples and further details about them.
 ---
 
-<ul>
+<ul class="list-panel">
 <% sitemap.find_resource_by_path('webapis/index.html').children.each do |page| %>
   <li>
-    <%= partial 'partials/objects/webapi', :locals => {:webapi => page} %>
+  <%= partial 'partials/objects/webapi', :locals => {:webapi => page} %>
   </li>
 <% end %>
 </ul>

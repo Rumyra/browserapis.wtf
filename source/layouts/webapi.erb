@@ -11,18 +11,39 @@
     <a href="<%= current_page.data.w3c_link %>"><%= current_page.data.w3c_status %></a>
     <a href="<%= current_page.data.caniuse %>">Support on caniuse.com</a>
     <a href="<%= current_page.data.mdn_docs %>">More info on MDN Docs</a>
+    <a href="<%= current_page.data.web_platform %>">More info on Web Platform Docs</a>
   </section>
 
-  <section class="links-other">
-    <% current_page.data.links_other.each do |title, url| %>
+<% if current_page.data.links_tutsarts %>
+  <section class="links-tuts-arts">
+    <ul>
+    <% current_page.data.links_tutsarts.each do |title, url| %>
       <li><%=link_to(title, url)%></li>
     <% end %>
-    <!-- tutorials & other articles -->
+    </ul>
   </section>
+<% end %>
 
+<% if current_page.data.links_examples %>
   <section class="links-examples">
-    <!-- demos & good uses of -->
+    <ul>
+    <% current_page.data.links_examples.each do |title, url| %>
+      <li><%=link_to(title, url)%></li>
+    <% end %>
+    </ul>
   </section>
+<% end %>
+
+<% if current_page.data.suggested_uses %>
+  <section class="uses">
+    <ul>
+    <% current_page.data.suggested_uses.each do |use| %>
+      <li><%= use %></li>
+    <% end %>
+    </ul>
+  </section>
+<% end %>
+
 
 </article>
 
