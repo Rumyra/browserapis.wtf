@@ -13,7 +13,7 @@
 // 1. COLOURS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 1.1 Colour palette:
 // Amend for your own palette. It's fine to rename vars - abstracting of these is in the next section (1.2) so updating that will update all other files.
-$pink: hsla(355,40%,50%,1);
+$pink: hsla(330,50%,60%,1);
 $orange: adjust-hue($pink, 60);
 $yellow: adjust-hue($orange, 60);
 $green: adjust-hue($yellow, 60);

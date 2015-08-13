@@ -60,7 +60,7 @@ body > footer {
 /*2.2 Main content container*/
 section[role="main"] {
   width: 100%;
-  padding: $verticalSpace $gutter;
+  padding: 0px $gutter;
   @include simple-vendor-prefix(box-sizing,border-box);
 }
 
