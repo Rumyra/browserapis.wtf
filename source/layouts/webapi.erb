@@ -1,49 +1,62 @@
 <% wrap_layout :layout do %>
 
-<article>
+<article class="api-detail">
 
   <h2><%= current_page.data.title %></h2>
   <h5><%= current_page.data.short_description %></h2>
 
-  <%= yield %>
+  <div class="api-links">
+    <section class="links-main">
+      <h4>Docs</h4>
+      <ul>
+        <li><a href="<%= current_page.data.w3c_link %>"><%= current_page.data.w3c_status %></a></li>
+        <li><a href="<%= current_page.data.caniuse %>"><%= current_page.data.title %> support on caniuse.com</a></li>
+        <li><a href="<%= current_page.data.mdn_docs %>"><%= current_page.data.title %> on MDN Docs</a></li>
+        <li><a href="<%= current_page.data.web_platform %>"><%= current_page.data.title %> on Web Platform Docs</a><li>
+      </ul>
+    </section>
 
-  <section class="links-main">
-    <a href="<%= current_page.data.w3c_link %>"><%= current_page.data.w3c_status %></a>
-    <a href="<%= current_page.data.caniuse %>">Support on caniuse.com</a>
-    <a href="<%= current_page.data.mdn_docs %>">More info on MDN Docs</a>
-    <a href="<%= current_page.data.web_platform %>">More info on Web Platform Docs</a>
-  </section>
-
-<% if current_page.data.links_tutsarts %>
-  <section class="links-tuts-arts">
-    <ul>
-    <% current_page.data.links_tutsarts.each do |title, url| %>
-      <li><%=link_to(title, url)%></li>
+    <% if current_page.data.links_tutsarts %>
+      <section class="links-tuts-arts">
+        <h4>Articles & Tutorials</h4>
+        <ul>
+        <% current_page.data.links_tutsarts.each do |title, url| %>
+          <li><%=link_to(title, url)%></li>
+        <% end %>
+        </ul>
+      </section>
     <% end %>
-    </ul>
-  </section>
-<% end %>
 
-<% if current_page.data.links_examples %>
-  <section class="links-examples">
-    <ul>
-    <% current_page.data.links_examples.each do |title, url| %>
-      <li><%=link_to(title, url)%></li>
+    <% if current_page.data.links_examples %>
+      <section class="links-examples">
+        <h4>Demos & Examples</h4>
+        <ul>
+        <% current_page.data.links_examples.each do |title, url| %>
+          <li><%=link_to(title, url)%></li>
+        <% end %>
+        </ul>
+      </section>
     <% end %>
-    </ul>
-  </section>
-<% end %>
+  </div>
 
-<% if current_page.data.suggested_uses %>
-  <section class="uses">
-    <ul>
-    <% current_page.data.suggested_uses.each do |use| %>
-      <li><%= use %></li>
-    <% end %>
-    </ul>
-  </section>
-<% end %>
+  <% if current_page.data.suggested_uses %>
+  <div class="api-uses">
+    <section class="uses">
+      <h4>Uses</h4>
+      <ul>
+      <% current_page.data.suggested_uses.each do |use| %>
+        <li><%= use %></li>
+      <% end %>
+      </ul>
+    </section>
+  </div>  
+  <% end %>
 
+  <div class="api-code">
+
+    <%= yield %>
+
+  </div>
 
 </article>
 
