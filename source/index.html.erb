@@ -1,14 +1,14 @@
 ---
 body_class: index
-title: Home | Web APIs
-keywords: Web, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs, Browser APIs
-description: A website showcasing all the new web APIs, their code examples and further details about them.
+title: Home | Browser APIs
+keywords: Web, Browser APIs, Device APIs, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs
+description: A website showcasing all the new borwser APIs, their code examples and further details about them.
 ---
 
 <ul class="list-panel">
-<% sitemap.find_resource_by_path('webapis/index.html').children.each do |page| %>
+<% sitemap.find_resource_by_path('browserapis/index.html').children.each do |page| %>
 
-  <%= partial 'partials/objects/webapi', :locals => {:webapi => page} %>
+  <%= partial 'partials/objects/browserapi', :locals => {:browserapi => page} %>
 
 <% end %>
 </ul>
