@@ -1,10 +1,14 @@
 ---
 title: Media Stream API
 short_description: User grants access to stream device media, usually either camera and/or microphone.
+tags: media, camera, microphone, getUserMedia,
+
 w3c_status: W3C Working Draft Feb '15
 w3c_link: http://www.w3.org/TR/mediacapture-streams/
 caniuse: http://caniuse.com/#feat=stream
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream
+web_platform: https://docs.webplatform.org/wiki/apis/media_capture_and_streams/MediaStream
+
 links_tutsarts:
   'Capturing Audio & Video in HTML5': http://www.html5rocks.com/en/tutorials/getusermedia/intro/
   'Its Curtains for Marital Strife Thanks to getUserMedia' : http://html5doctor.com/getusermedia/
@@ -13,6 +17,8 @@ links_examples:
   'Play The Xylophone With Your Hands' : http://www.soundstep.com/blog/experiments/jsdetection/
 suggested_uses:
   - Use with WebRTC for voice and video calls
+  - Picking up on users ambient sound
+  - Camera applications
 ---
 
 
