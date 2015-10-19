@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<html class="no-js" lang="en">
 <head>
   <!--char set (lang above)-->
   <meta charset="utf-8">
@@ -18,21 +16,15 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <title>Geolocation API</title>
-
-
-  <!--Stylesheets (include as necessary)-->
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
-  <![endif]-->
+  
   <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
   <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
   <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
   <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
   <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
-
-  <!--include if you want modenizr (rest of scripts just before </body>)
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-  -->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
 </head>
 
 
@@ -130,7 +122,7 @@
   <footer>
   <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
   --><nav>
-    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+    <a href="https://github.com/Rumyra/browserapis.wtf" rel="external">Contribute</a>
   </nav>
 </footer>
 
@@ -191,6 +183,16 @@ function toggleClass(el, className) {
 	  el.className = classes.join(' ');
 	}
 }
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7652340-8', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
