@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Navigation, Breadcrumbs, Pagination, Tabs, Menus">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Navigation | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar navigation">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Navigations and Menus</h2>
+
+<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_nav-menu.scss">_nav-menu.scss</a> for all the styles.</p>
+
+<article class="element-copy">
+  <header id="navigation">
+    <h3>Navigation</h3>
+  </header>
+
+  <p>Contrary to popular belief the navigation element doesn't need to contain a list. (N.B. The HTML empty comments in-between nav items are to combat the inline-block whitespace issue).</p>
+  <section class="element-one">
+    <nav role="navigation">
+      <a href="#">Nav item one</a><!--
+      --><a href="#">Second item</a><!--
+      --><a href="#">Nav item 3</a><!--
+      --><a href="#">Last item</a>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation">
+  &lt;a href="#">Nav item one&lt;/a>&lt;!--
+  -->&lt;a href="#">Second item&lt;/a>&lt;!--
+  -->&lt;a href="#">Nav item 3&lt;/a>&lt;!--
+  -->&lt;a href="#">Last item&lt;/a>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav role="navigation" class="nav-vertical">
+        <a href="#">Nav item one</a>
+        <a href="#">Second item</a>
+        <a href="#">Nav item 3</a>
+        <a href="#">Last item</a>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-vertical">
+  &lt;a href="#">Nav item one&lt;/a>
+  &lt;a href="#">Second item&lt;/a>
+  &lt;a href="#">Nav item 3&lt;/a>
+  &lt;a href="#">Last item&lt;/a>
+&lt;/nav></code></pre>
+  </section>
+
+  <p>You can of course use a list, nothing is stopping you. It's super helpful for nested navigations. Note the <code>.nav-sub</code> class for these.</p>
+
+  <p>There are also some optional add ons here. Note the <code>button</code> to hide show the nav on small screens. Also there's a <code>.nav-block</code> class added for an alternative type of styling.</p>
+  <section class="element-one">
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="#">Nav Item One</a></li><!--
+        --><li>
+          <a href="#">With Sub Nav</a>
+            <nav role="navigation" class="nav-sub">
+              <a href="#">Sub Nav 1</a>
+              <a href="#">Two Sub Nav</a>
+              <a href="#">Third item</a>
+              <a href="#">4th nav</a>
+              <a href="#">Sub Nav 5</a>
+            </nav>
+        </li><!--
+        --><li><a href="#">Another Item</a></li><!--
+        --><li><a href="#">The Last Nav Item</a></li>
+      </ul>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-block">
+  &lt;button class="nav-toggle">Show/Hide Nav&lt;/button>
+  &lt;ul>
+    &lt;li>&lt;a href="#">Nav Item One&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>
+      &lt;a href="#">With Sub Nav&lt;/a>
+        &lt;nav role="navigation" class="nav-sub">
+          &lt;a href="#">Sub Nav 1&lt;/a>
+          &lt;a href="#">Two Sub Nav&lt;/a>
+          &lt;a href="#">Third item&lt;/a>
+          &lt;a href="#">4th nav&lt;/a>
+          &lt;a href="#">Sub Nav 5&lt;/a>
+        &lt;/nav>
+    &lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Another Item&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">The Last Nav Item&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav role="navigation" class="nav-block-vertical">
+      <ul>
+        <li><a href="#">Nav Item One</a></li>
+        <li>
+          <a href="#">With Sub Nav</a>
+            <nav role="navigation" class="nav-sub">
+              <a href="#">Sub Nav 1</a>
+              <a href="#">Two Sub Nav</a>
+              <a href="#">Third item</a>
+              <a href="#">4th nav</a>
+              <a href="#">Sub Nav 5</a>
+            </nav>
+        </li>
+        <li><a href="#">Another Item</a></li>
+        <li><a href="#">The Last Nav Item</a></li>
+      </ul>
+    </nav>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav role="navigation" class="nav-block-vertical">
+  &lt;ul>
+    &lt;li>&lt;a href="#">Nav Item One&lt;/a>&lt;/li>
+    &lt;li>
+      &lt;a href="#">With Sub Nav&lt;/a>
+        &lt;nav role="navigation" class="nav-sub">
+          &lt;a href="#">Sub Nav 1&lt;/a>
+          &lt;a href="#">Two Sub Nav&lt;/a>
+          &lt;a href="#">Third item&lt;/a>
+          &lt;a href="#">4th nav&lt;/a>
+          &lt;a href="#">Sub Nav 5&lt;/a>
+        &lt;/nav>
+    &lt;/li>
+    &lt;li>&lt;a href="#">Another Item&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">The Last Nav Item&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="breadcrumbs">
+    <h3>Breadcrumbs</h3>
+  </header>
+  <section class="element-one">
+    <nav class="nav-breadcrumb">
+      <ol>
+        <li><a href="#">Top Level</a></li><!--
+        --><li><a href="#">Second Level</a></li><!--
+        --><li><span>Third Level</span></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-breadcrumb">
+  &lt;ol>
+    &lt;li>&lt;a href="#">Top Level&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Second Level&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span>Third Level&lt;/span>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="pagination">
+    <h3>Pagination</h3>
+  </header>
+  <section class="element-one">
+    <nav class="nav-pagination">
+      <ol>
+        <li><a href="#">First</a></li><!--
+        --><li><a href="#" rel="prev">Previous</a></li><!--
+        --><li><a href="#">1</a></li><!--
+        --><li><span title="Current Page">2</span></li><!--
+        --><li><a href="#">3</a></li><!--
+        --><li><a href="#" rel="next">Next</a></li><!--
+        --><li><a href="#">Last</a></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-pagination">
+  &lt;ol>
+    &lt;li>&lt;a href="#">First&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="prev">Previous&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">1&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span title="Current Page">2&lt;/span>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">3&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="next">Next&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Last&lt;/a>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+
+  <section class="element-one">
+    <nav class="nav-pagination-block">
+      <ol>
+        <li><a href="#">First</a></li><!--
+        --><li><a href="#" rel="prev">Previous</a></li><!--
+        --><li><a href="#">1</a></li><!--
+        --><li><span title="Current Page">2</span></li><!--
+        --><li><a href="#">3</a></li><!--
+        --><li><a href="#" rel="next">Next</a></li><!--
+        --><li><a href="#">Last</a></li>
+      </ol>
+    </nav>
+
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;nav class="nav-pagination-block">
+  &lt;ol>
+    &lt;li>&lt;a href="#">First&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="prev">Previous&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">1&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;span title="Current Page">2&lt;/span>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">3&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#" rel="next">Next&lt;/a>&lt;/li>&lt;!--
+    -->&lt;li>&lt;a href="#">Last&lt;/a>&lt;/li>
+  &lt;/ol>
+&lt;/nav></code></pre>
+  </section>
+</article>
+
+<!--   <article class="element-copy">
+    <header id="images">
+      <h3>Messages</h3>
+    </header>
+    <section class="element-one">
+
+      <pre class="language-markup"><code></code></pre>
+      <button class="clipboard">Copy to Clipboard</button>
+    </section>
+  </article> -->
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

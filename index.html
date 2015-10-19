@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="Web, Browser APIs, Device APIs, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs">
+  <meta name="description" content="A website showcasing all the new borwser APIs, their code examples and further details about them.">
+  <title>Home | Browser APIs</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="index">
+
+    <header role="banner">
+    <h1><a href="/">Browser APIs</a></h1>
+    <div>
+      <p>AKA Web APIs, Web Javascript APIs, Device APIs, HTML5 APIs (meh), or simply Javascript APIs</p>
+      <p>I like <i>Client Side Web APIs</i> myself - or CSWAPIS if you will</p>
+    </div>
+  </header>
+
+  <section role="main">
+
+    <ul class="list-panel">
+
+  <li>
+  <a href="/browserapis/ambient.html">
+    <h4>Ambient Light Event</h4>
+    <p>Returns the lux value detected by the devices camera.</p>
+  </a>
+</li>
+
+
+
+  <li>
+  <a href="/browserapis/animation.html">
+    <h4>Web Animation API</h4>
+    <p>Specifying and controlling an animation.</p>
+  </a>
+</li>
+
+
+
+  <li>
+  <a href="/browserapis/audio.html">
+    <h4>Web Audio API</h4>
+    <p>Allows manipulation and analysation of audio data (files or streams), as well as play back controls.</p>
+  </a>
+</li>
+
+
+
+  <li>
+  <a href="/browserapis/deviceorientation.html">
+    <h4>Device Orientation API</h4>
+    <p>Returns values on the device's position & orientation.</p>
+  </a>
+</li>
+
+
+
+  
+
+
+  <li>
+  <a href="/browserapis/geolocation.html">
+    <h4>Geolocation API</h4>
+    <p>User grants access their to device location, accessible via lat/long co-ords.</p>
+  </a>
+</li>
+
+
+
+  <li>
+  <a href="/browserapis/mediastream.html">
+    <h4>Media Stream API</h4>
+    <p>User grants access to stream device media, usually either camera and/or microphone.</p>
+  </a>
+</li>
+
+
+
+  <li>
+  <a href="/browserapis/vibration.html">
+    <h4>Vibration API</h4>
+    <p>Causes the device to vibrate.</p>
+  </a>
+</li>
+
+
+</ul>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  
+<!--JAVASCRIPT include as necessary
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+Google maps
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+Google Analytics: change UA-XXXXX-X to be your site's ID.
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script src="/assets/javascripts/"></script>
+
+<script type="text/javascript">
+</script>
+-->
+<script type="text/javascript">
+
+var navToggleButton = document.getElementsByClassName('nav-toggle');
+
+for (i=0; i<navToggleButton.length; i++) {
+	var navToToggle = navToggleButton[i].nextElementSibling;
+
+	navToggleButton[i].addEventListener("click", function(e) {
+		toggleClass(navToToggle, 'nav-show');
+	})
+}
+
+// nextSibling can include text nodes
+function nextElementSibling(el) {
+  do { el = el.nextSibling; } while ( el && el.nodeType !== 1 );
+  return el;
+}
+// el.nextElementSibling || nextElementSibling(el);
+
+function toggleClass(el, className) {
+	if (el.classList) {
+	  el.classList.toggle(className);
+	} else {
+	    var classes = el.className.split(' ');
+	    var existingIndex = -1;
+	    for (var i = classes.length; i--;) {
+	      if (classes[i] === className)
+	        existingIndex = i;
+	    }
+
+	    if (existingIndex >= 0)
+	      classes.splice(existingIndex, 1);
+	    else
+	      classes.push(className);
+
+	  el.className = classes.join(' ');
+	}
+}
+
+</script>
+
+
+</body>
+</html>

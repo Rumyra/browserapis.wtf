@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Main Partials, Header, Footer">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Main Partials | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar main-partials">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Main Partials</h2>
+<article class="element-copy">
+	<header>
+		<h3>Kitchen Sink Structure</h3>
+	</header>
+	<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_main-partials.scss">_main-partials.scss</a> for all the styles. (Includes <code>html</code> and <code>body</code> styles)</p>
+	<p>All head shizzle, header, main content section, aside & footer.</p>
+	<p>Default layout is full width seen on the homepage. Add <code>.layout-sidebar</code> class to body for large screen to have side nav a la the pages of this site.</p>
+	<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;!DOCTYPE html>
+&lt;!--[if lt IE 7]>&lt;html class="no-js lt-ie9 lt-ie8 lt-ie7"> &lt;![endif]-->
+&lt;!--[if IE 7]>&lt;html class="no-js lt-ie9 lt-ie8"> &lt;![endif]-->
+&lt;!--[if IE 8]>&lt;html class="no-js lt-ie9"> &lt;![endif]-->
+&lt;!--[if gt IE 8]>&lt;!-->&lt;html class="no-js" lang="en"> &lt;!--<![endif]-->
+&lt;head>
+&lt;!--char set (lang above)-->
+&lt;meta charset="utf-8">
+
+&lt;!--device/browser shizzle-->
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+&lt;!--meta content-->
+&lt;link rel="shortcut icon" href="favicon.ico" />
+&lt;link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+&lt;meta name="author" content="The Lab by O2">
+&lt;meta name="dcterms.rightsHolder" content="Built by The Lab, United Kingdom">
+&lt;meta name="keywords" content="The Lab, Other Keywords, Here">
+&lt;meta name="description" content="White Paper, so @Rumyra can build templates easily">
+&lt;title>White Paper | The Lab @ O2&lt;/title>
+
+&lt;!--Stylesheets (include as necessary)-->
+&lt;!--[if lte IE 9]>
+&lt;link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+&lt;![endif]-->
+
+&lt;!--&lt;link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css' />-->
+&lt;link type="text/css" href="assets/css/sass/application.css" rel="stylesheet" media="screen" />
+&lt;!--&lt;link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+&lt;!--include if you want modenizr (rest of scripts just before &lt;/body>)
+&lt;script src="js/vendor/modernizr-2.6.2.min.js">&lt;/script>
+-->
+&lt;/head>
+
+&lt;body class="unique-target-here-page-desc">
+&lt;header role="banner">
+&lt;h1>&lt;a href="/">Site Title&lt;/a>&lt;/h1>
+&lt;nav role="navigation">
+  	&lt;ul>
+	    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+	    &lt;li>
+	      &lt;a href="#" rel="internal">Main Link&lt;/a>
+	    	&lt;nav class="nav-sub">
+	    		&lt;a href="#">Nested&lt;/a>
+	    		&lt;a href="#">Navigation&lt;/a>
+	    		&lt;a href="#">Links&lt;/a>
+	    	&lt;/nav>
+	    &lt;/li>
+	    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+	    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/nav>
+&lt;/header>
+
+&lt;section role="main">
+&lt;!--MAIN CONTENT GOES HERE-->
+&lt;/section>
+
+&lt;aside>
+	&lt;!-- Add promos here like this-->
+	&lt;article class="latest-tweets">
+		&lt;h4>Latest Tweets&lt;/h4>
+		&lt;!--Promo content-->
+	&lt;/article>
+&lt;/aside>
+
+&lt;footer>
+  &lt;p>Made by The Lab @ O2. 2014&lt;/p>&lt;!--
+  -->&lt;nav>
+    &lt;a href="https://twitter.com/thelab_uk" rel="external">Twitter&lt;/a>
+    &lt;a href="https://thelab.o2.com/" rel="external">Blog&lt;/a>
+  &lt;/nav>
+&lt;/footer>
+
+&lt;script src="assets/js/app.js">&lt;/script>
+
+&lt;!--Example JavaScript includes:
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">&lt;/script>
+&lt;script>window.jQuery || document.write('&lt;script src="js/vendor/jquery-1.8.3.min.js">&lt;\/script>')&lt;/script>
+
+&lt;script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true">&lt;/script>
+
+Google Analytics: change UA-XXXXX-X to be your site's ID.
+&lt;script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script>-->
+&lt;/body>
+&lt;/html></code></pre>
+</article>
+
+<article class="element-copy">
+	<header>
+		<h3>Simple Structure</h3>
+	</header>
+	<p>Only the essentials - for those who know what they are doing!</p>
+	<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+&lt;!--char set (lang above)-->
+&lt;meta charset="utf-8">
+
+&lt;!--device/browser shizzle-->
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+&lt;!--meta content-->
+&lt;link rel="shortcut icon" href="favicon.ico" />
+&lt;link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+&lt;meta name="author" content="The Lab by O2">
+&lt;meta name="dcterms.rightsHolder" content="Built by The Lab, United Kingdom, 2012">
+&lt;meta name="keywords" content="The Lab, Other Keywords, Here">
+&lt;meta name="description" content="White Paper, so Ruth can build templates easily">
+&lt;title>White Paper | The Lab @ o2&lt;/title>
+&lt;!--Stylesheets (include as necessary)-->
+
+&lt;link type="text/css" href="assets/css/sass/application.css" rel="stylesheet" media="screen" />
+&lt;/head>
+
+&lt;body class="unique-target-here-page-desc">
+&lt;!--Add header here-->
+
+&lt;section role="main">
+&lt;!--MAIN CONTENT GOES HERE-->
+&lt;/section>
+
+&lt;!--Add aside here-->
+&lt;!--Add footer here-->
+&lt;/body>
+&lt;/html>
+	</code></pre>
+</article>
+
+<article class="element-copy">
+	<header>
+		<h3>Header</h3>
+	</header>
+	<p>Main header and main nav - notice the nested nav. (This is inc in Kitchen Sink)</p>
+	<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;header role="banner">
+&lt;h1>&lt;a href="/">Site Title&lt;/a>&lt;/h1>
+&lt;nav role="navigation">
+	&lt;ul>
+    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+    &lt;li>
+      &lt;a href="#" rel="internal">Main Link&lt;/a>
+    	&lt;nav class="nav-sub">
+    		&lt;a href="#">Nested&lt;/a>
+    		&lt;a href="#">Navigation&lt;/a>
+    		&lt;a href="#">Links&lt;/a>
+    	&lt;/nav>
+    &lt;/li>
+    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#" rel="internal">Single Link&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/nav>
+&lt;/header>
+	</code></pre>
+</article>
+
+<article class="element-copy">
+	<header>
+		<h3>Aside</h3>
+	</header>
+	<p></p>
+	<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;aside>
+&lt;!-- Add promos here like this-->
+&lt;article class="latest-tweets">
+	&lt;h4>Latest Tweets&lt;/h4>
+	&lt;!--Promo content-->
+&lt;/article>
+&lt;/aside>
+	</code></pre>
+</article>
+
+<article class="element-copy">
+	<header>
+		<h3>Footer</h3>
+	</header>
+	<p>Note all the javascript - this is where you should add it. Delete as necessary.</p>
+
+	<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;footer>
+  &lt;p>Made by The Lab @ O2. 2014&lt;/p>&lt;!--
+  -->&lt;nav>
+    &lt;a href="https://twitter.com/thelab_uk" rel="external">Twitter&lt;/a>
+    &lt;a href="https://thelab.o2.com/" rel="external">Blog&lt;/a>
+  &lt;/nav>
+&lt;/footer>
+
+&lt;script src="assets/js/app.js">&lt;/script>
+
+&lt;!--Example JavaScript includes:
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">&lt;/script>
+&lt;script>window.jQuery || document.write('&lt;script src="js/vendor/jquery-1.8.3.min.js">&lt;\/script>')&lt;/script>
+
+&lt;script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true">&lt;/script>
+
+Google Analytics: change UA-XXXXX-X to be your site's ID.
+&lt;script>
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script>-->
+	</code></pre>
+</article>
+
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

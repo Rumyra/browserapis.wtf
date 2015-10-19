@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Buttons, Icons">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Buttons & Icons | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar buttons-icons">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      	<h2>Buttons & Icons</h2>
+<article class="element-copy">
+	<header id="buttons">
+		<h3>Buttons</h3>
+	</header>
+	<p>Lots of elements can easily take on the button style, either by the use of the correct element (ಠ_ಠ) or by adding a class of <code>.button</code>. Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_buttons-icons.scss">_buttons-icons.scss</a> for all the styles.</p>
+	<section class="element-one">
+		<button>Just a button</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button>Just a button&lt;/button></code></pre>
+	</section>
+	<section class="element-one">
+		<input type="submit" value='Submit' />
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;input type="submit" value="valueHere" name="nameHere" /></code></pre>
+	</section>
+	<section class="element-one">
+		<a href="/" class="button">Anchor</a>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="/" class="button">Anchor&lt;/a></code></pre>
+	</section>
+	<p>You can easily differ the colour, if the button is unique, by calling the <code>button-style</code> mixin and passing in a colour.</p>
+	<section class="element-one">
+		<button class="button-dif">A different colour</button>
+		<pre class="language-css"><button class="icon-before i-copy">Copy to Clipboard</button><code>.button-reset, input[type="reset"] {@include button-style($pink)}</code></pre>
+	</section>
+	<p>Form resets differ by default.</p>
+	<section class="element-one">
+		<input type="reset" value='input[type="reset"]' />
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;input type="reset" value="valueHere" name="nameHere" /></code></pre>
+	</section>
+	<p>The <code>disabled</code> attribute can be added to all inputs and buttons, or you can use the <code>.button-disabled</code> class.
+	<section class="element-one">
+		<button disabled>button:disabled</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button disabled>button:disabled&lt;/button></code></pre>
+	</section>
+	<p>If you want something a little more eye catching, try adding the <code>.button-feature</code> class (use it with <code>.button</code> class on any element).</p>
+	<section class="element-one">
+		<button class="button-feature">Main Call To Action</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button class="button-feature">Main Call To Action&lt;/button></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="icons">
+		<h3>Icons</h3>
+	</header>
+	<p>We use an icon font called <a href="">Font Awesome</a> this is because of the huge amount of icons that come with it, one for every occasion.</p>
+
+	<p>There are four ways to include icons: Turn as element into an icon, turn an element into a button with an icon, add an icon at the start of an element and add an icon at the end of an element.</p>
+	<p>Each way uses it's appropriate class, then a class to depict which icon to use, (see bottom reference), like <code>i-refresh</code> or <code>i-menu</code>. Any item can be used with any method.</p>
+	<p>You can also use sass' @extend directorate to add the styles from these classes on to your element in the CSS, keeping the HTML clean. Hurrah \o/</p>
+
+	<h4>Turn an element into an icon: <code>.icon-make</code></h4>
+	<p>Use appropriate button or link elements if the icon is clickable.</p>
+	<section class="element-one">
+		<button class="icon-make i-close">Close</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button class="icon-make i-close">Close&lt;/button></code></pre>
+	</section>
+	<section class="element-one">
+		<a href="" class="icon-make i-refresh">Refresh</a>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="" class="icon-make i-refresh">Refresh&lt;/a></code></pre>
+	</section>
+	<p>A span is always good if it's not, however any element can be used.</p>
+	<section class="element-one">
+		<span class="icon-make i-settings">Settings</span>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;span class="icon-make i-settings">Settings&lt;/span></code></pre>
+	</section>
+
+	<h4>Turn an element into a button with an icon: <code>.icon-button</code></h4>
+	<p>N.B. You can't use these icon methods on input elements, for form buttons please use the <code>button</code> element instead.</p>
+	<section class="element-one">
+		<button class="icon-button i-feedback">Feedback</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button class="icon-button i-feedback">Feedback&lt;/button></code></pre>
+	</section>
+	<section class="element-one">
+		<a href="" class="icon-button i-email">Email</a>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="" class="icon-button i-email">Email&lt;/a></code></pre>
+	</section>
+
+	<h4>Add an icon at the start of an element: <code>.icon-before</code></h4>
+	<section class="element-one">
+		<button class="icon-before i-camera">Take Photo</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button class="icon-before i-camera">Take Photo&lt;/button></code></pre>
+	</section>
+	<section class="element-one">
+		<a href="" class="icon-before i-user">Account</a>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="" class="icon-before i-user">Account&lt;/a></code></pre>
+	</section>
+	<section class="element-one">
+		<span class="icon-before i-yes">Completed</span>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;span class="icon-before i-yex">Completed&lt;/span></code></pre>
+	</section>
+
+	<h4>Add an icon at the end of an element: <code>.icon-after</code></h4>
+	<section class="element-one">
+		<button class="icon-after i-calendar">Show Calendar</button>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button class="icon-after i-calendar">Show Calendar&lt;/button></code></pre>
+	</section>
+	<section class="element-one">
+		<a href="" class="icon-after i-signout">Sign Out</a>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="" class="icon-after i-signout">Sign Out&lt;/a></code></pre>
+	</section>
+	<section class="element-one">
+		<span class="icon-after i-twitter">Tweet</span>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;span class="icon-after i-twitter">Tweet&lt;/span></code></pre>
+	</section>
+
+	<h4>Icon Reference</h4>
+	<p>This icon reference contains all the icons already coded into this framework - If you can't find what you are looking for, it <b>will</b> be in <a href="http://fontawesome.io/cheatsheet/">Font Awesome here</a>. To add one just follow the guides in <a href="">_buttons-icons.scss</a></p>
+	<div class="example-icons">
+		<span class="icon-before i-move">.i-move</span>
+		<span class="icon-before i-copy">.i-copy</span>
+		<span class="icon-before i-menu">.i-menu</span>
+		<span class="icon-before i-calendar">.i-calendar</span>
+		<span class="icon-before i-yes">.i-yes</span>
+		<span class="icon-before i-settings">.i-settings</span>
+		<span class="icon-before i-feedback">.i-feedback</span>
+		<span class="icon-before i-email">.i-email</span>
+		<span class="icon-before i-warning">.i-warning</span>
+		<span class="icon-before i-minus">.i-minus</span>
+		<span class="icon-before i-plus">.i-plus</span>
+		<span class="icon-before i-closed">.i-closed</span>
+		<span class="icon-before i-open">.i-open</span>
+		<span class="icon-before i-refresh">.i-refresh</span>
+		<span class="icon-before i-search">.i-search</span>
+		<span class="icon-before i-signin">.i-signin</span>
+		<span class="icon-before i-signout">.i-signout</span>
+		<span class="icon-before i-close">.i-close</span>
+		<span class="icon-before i-delete">.i-delete</span>
+		<span class="icon-before i-user">.i-user</span>
+		<span class="icon-before i-facebook">.i-facebook</span>
+		<span class="icon-before i-twitter">.i-twitter</span>
+		<span class="icon-before i-android">.i-android</span>
+		<span class="icon-before i-apple">.i-apple</span>
+		<span class="icon-before i-github">.i-github</span>
+	</div>
+</article>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

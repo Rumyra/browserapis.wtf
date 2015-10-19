@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Tables">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Tables | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar tables">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Tables</h2>
+<article class="element-copy">
+  <p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_tables.scss">_tables.scss</a> for all the styles.</p>
+	<p>Hoping more extensive tables will be added as we go on (eg. collapsable & sortable), for the minute we have a basic table and a simple table.</p>
+	<section class="element-one">
+		<table summary="An example of a basic table">
+      <caption>Basic table: This is the <code>caption</code></caption>
+      <thead>
+        <tr><th>Headings</th><th>are wrapped</th><th>in <code>thead</code> with <code>th</code> cells</th>
+</tr>
+      </thead>
+      <tbody>
+        <tr><th>Here are</th><td>Some main</td><td>data cells (<code>td</code>)</td></tr>
+        <tr><th>These are all</th><td>Wrapped in the</td><td><code>tbody</code> element</td></tr>
+        <tr><th>Tables</th><td>Can get very</td><td>Confusing</td></tr>
+        <tr><th>They are also a</th><td>Complete bitch</td><td>To syle</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>I have also</td><td>Included a <code>tfoot</code></td><td>Just cos</td></tr>
+      </tfoot>
+  	</table>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;table summary="An example of a basic table">
+  &lt;caption>Basic table: This is the &lt;code>caption&lt;/code>&lt;/caption>
+  &lt;thead>
+    &lt;tr>
+      &lt;th>Headings&lt;/th>&lt;th>are wrapped&lt;/th>&lt;th>in &lt;code>thead&lt;/code> with &lt;code>th&lt;/code> cells&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;tr>
+      &lt;th>Here are&lt;/th>&lt;td>Some main&lt;/td>&lt;td>data cells (&lt;code>td&lt;/code>)&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;th>These are all&lt;/th>&lt;td>Wrapped in the&lt;/td>&lt;td>&lt;code>tbody&lt;/code> element&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;th>Tables&lt;/th>&lt;td>Can get very&lt;/td>&lt;td>Confusing&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+      &lt;th>They are also a&lt;/th>&lt;td>Complete bitch&lt;/td>&lt;td>To style&lt;/td>
+    &lt;/tr>
+  &lt;/tbody>
+  &lt;tfoot>
+    &lt;tr>
+      &lt;td>I have also&lt;/td>&lt;td>Included a &lt;code>tfoot&lt;/code>&lt;/td>&lt;td>Just cos&lt;/td>
+    &lt;/tr>
+  &lt;/tfoot>
+&lt;/table></code></pre>
+	</section>
+  <p>If that feels like too much HTML, you can make a table even simpler. You do have to add a <code>table-simple</code> class though as browsers have a tendency to add <code>tbody</code></p>
+	<section class="element-one">
+		<table summary="An example of a simple table" class="table-simple">
+      <tr><th>This</th><th>is a simple</th><th><code>table</code> We still have <code>th</code> cells</th>
+</tr>
+      <tr><td>Here are</td><td>Some main</td><td>data cells (<code>td</code>)</td></tr>
+      <tr><td>Tables</td><td>Can get very</td><td>Confusing</td></tr>
+      <tr><td>They are also a</td><td>Complete bitch</td><td>To syle</td></tr>
+      <tr><td>Hence why I</td><td>try to keep the</td><td>styling simple</td></tr>
+  	</table>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;table summary="An example of a simple table" class="table-simple">
+  &lt;tr>
+    &lt;th>This&lt;/th>&lt;th>is a simple&lt;/th>&lt;th>&lt;code>table&lt;/code> We still have &lt;code>th&lt;/code> cells&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>Here are&lt;/td>&lt;td>Some main&lt;/td>&lt;td>data cells (&lt;code>td&lt;/code>)&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>Tables&lt;/td>&lt;td>Can get very&lt;/td>&lt;td>Confusing&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>They are also a&lt;/td>&lt;td>Complete bitch&lt;/td>&lt;td>To syle&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>Hence why I&lt;/td>&lt;td>try to keep the&lt;/td>&lt;td>styling simple&lt;/td>
+  &lt;/tr>
+&lt;/table></code></pre>
+	</section>
+</article>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

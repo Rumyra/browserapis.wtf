@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Front End Framework">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Home | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="index">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Styleguide</h2>
+
+<p class="lede">This contains all HTML elements, their mark up and basic styling. Each section has a partner .scss file.</p>
+
+<p>Start here. Go through all the partner Sass files, (start with _settings.scss), creating your base styles for the base elements. You can then go about expanding and adding UI elements from your specific design.</p>
+
+<p>N.B. Default layout is full width seen here on the homepage. Add <code>.layout-sidebar</code> class to body for large screen to have side nav, a la the pages of this styleguide.</p>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

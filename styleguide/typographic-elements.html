@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Typography, Text Elements">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Typography | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar typography">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Typographic Elements</h2>
+<article class="element-copy">
+	<header id="headers">
+		<h3>Headers</h3>
+	</header>
+	<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_typographic-elements.scss">_typographic-elements.scss</a> for all the styles.</p>
+	<p>You can have more than 6 levels of heading - but I've never seen a need.</p>
+	<section class="element-one" id="example">
+		<h1>Heading One</h1>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h1>Main Heading&lt;/h1></code></pre>
+
+	</section>
+	<section class="element-one">
+		<h2>Heading Two</h2>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h2>Page Heading&lt;/h2></code></pre>
+	</section>
+	<section class="element-one">
+		<h3>Heading Three</h3>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h3>Heading Three&lt;/h3></code></pre>
+	</section>
+	<section class="element-one">
+		<h4>Heading Four</h4>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h4>Heading Four&lt;/h4></code></pre>
+	</section>
+	<section class="element-one">
+		<h5>Heading Five</h5>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h5>Heading Five&lt;/h5></code></pre>
+	</section>
+	<section class="element-one">
+		<h6>Heading Six</h6>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;h6>Heading Six&lt;/h6></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="paragraphs">
+		<h3>Paragraphs</h3>
+	</header>
+	<p></p>
+	<section class="element-one">
+		<p>This is a normal paragraph. Lorem Ipsum.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;p>This is a normal paragraph. Lorem Ipsum.&lt;/p></code></pre>
+	</section>
+	<section class="element-one">
+		<p class="lede">This is a lede paragraph, use it at the beginning of copy or for feature paragraphs.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;p>This is a lede paragraph, use it at the beginning of copy or for feature text.&lt;/p></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="formatting">
+		<h3>Text Formatting</h3>
+	</header>
+	<p>Please note these are all inline elements, so please use them in sentences (<code>&lt;p></code>). The excepting is the anchor tag, which officially can be a block element in HTML5</p>
+	<section class="element-one">
+		<p>Spans are cool, you can just wrap em around anything inline and style <span>willy nilly</span></p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;span>Add a class for styling&lt;/span></code></pre>
+	</section>
+	<section class="element-one">
+		<p><span class="feature-text">Featured text. For that extra special copy.</span> Add a class of <code>feature-text</code> to a span to make text bold and italic.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;span class="feature-text">Featured text&lt;/span></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This sentence uses the <strong>strong</strong> tag.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;strong>This is important&lt;/strong></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This sentence <b>uses the b tag</b>, it styles like strong but has no semantic meaning.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;b>I'm a fake strong&lt;/b></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This sentence uses the <em>emphasis</em> tag.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;em>This is emphasised&lt;/em></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This sentence <i>uses the i tag</i>, it styles text italic like.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;i>I'm italic style text&lt;/i></code></pre>
+	</section>
+	<section class="element-one">
+		<p>You'll notice now I'm going to.<br />Break this sentence with a <code>br</code>. These should <strong>not</strong> be used to clear elements.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;br /></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This is an <a href="#" rel="external">inline link</a>. Note the <code>rel</code> atrribute :)</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;a href="#" rel="external">I'm a link&lt;/a></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This is the <del>keep</del> del element</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;del>Delete this&lt;/del></code></pre>
+	</section>
+	<section class="element-one">
+		<p>I want to be <mark>highlighted</mark></p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;mark>highlight me&lt;/mark></code></pre>
+	</section>
+	<section class="element-one">
+		<p>I'm going to <ins>insert something here</ins>.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;ins>inserted&lt;/ins></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This is <dfn title="to describe something">defined</dfn>, hover it.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;dfn title="definition here">define&lt;/dfn></code></pre>
+	</section>
+	<section class="element-one">
+		<p>The <abbr title="United Kingdom">UK</abbr> is abbreviated</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;abbr title="long version here">&lt;/abbr></code></pre>
+	</section>
+	<section class="element-one">
+		<p>If you're writing <code>code</code> you may use this.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;code>code here&lt;/code></code></pre>
+	</section>
+	<section class="element-one">
+		<p>So there's a keyboard tag. Press <kbd>Enter</kbd></p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;kbd>Enter&lt;/kbd></code></pre>
+	</section>
+	<section class="element-one">
+		<p>There's also <samp>sample output</samp> from a program.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;samp>sample output&lt;/samp></code></pre>
+	</section>
+	<section class="element-one">
+		<p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;var>variable here&lt;/var></code></pre>
+	</section>
+	<section class="element-one">
+		<p>This is <small>tiny</small> text</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;small>small text&lt;/small></code></pre>
+	</section>
+	<section class="element-one">
+		<p>The <sub>sub text</sub> element</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;sub>sub text&lt;/sub></code></pre>
+	</section>
+	<section class="element-one">
+		<p>The <sup>sup text</sup> element</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;sup>sup text&lt;/sup></code></pre>
+	</section>
+<!-- @todo Need to add bdi & bdo, wbr, ruby, rt, rb-->
+	<!--<section class="element-one">
+		<p></p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;i>&lt;/i></code></pre>
+	</section>-->
+</article>
+
+<article class="element-copy">
+	<header id="lists">
+		<h3>Lists</h3>
+	</header>
+	<p></p>
+	<section class="element-one">
+		<ul>
+			<li>This is an</li>
+			<li>Unordered</li>
+			<li>List</li>
+		</ul>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;ul>
+	&lt;li>This is an&lt;/li>
+	&lt;li>Unordered&lt;/li>
+	&lt;li>List&lt;/li>
+&lt;/ul></code></pre>
+	</section>
+	<section class="element-one">
+		<ol>
+			<li>This is an</li>
+			<li>Ordered list</li>
+			<li>See it has</li>
+			<li>A different style</li>
+		</ol>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;ol>
+	&lt;li>This is an&lt;/li>
+	&lt;li>Ordered list&lt;/li>
+	&lt;li>See it has&lt;/li>
+	&lt;li>A different style&lt;/li>
+&lt;/ol></code></pre>
+	</section>
+	<section class="element-one">
+		<dl>
+      <dt>Definition List</dt>
+      <dd>A list that has terms and definitions</dd>
+      <dd>You may have as many definitions of a term as you like</dd>
+      <dt>In gravida sheezy nizzle est</dt>
+      <dd>Fo shizzle shut the shizzle up</dd>
+      <dt>Etizzle sure</dt>
+      <dd>Donizzle doggy mi pimpin' erizzle pizzle vehicula</dd>
+  	</dl>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;dl>
+	&lt;dt>Definition List&lt;/dt>
+	&lt;dd>A list that has terms and definitions&lt;/dd>
+	&lt;dd>You may have as many definitions of a term as you like&lt;/dd>
+
+	&lt;dt>In gravida sheezy nizzle est&lt;/dt>
+	&lt;dd>Fo shizzle shut the shizzle up&lt;/dd>
+
+	&lt;dt>Etizzle sure&lt;/dt>
+	&lt;dd>Donizzle doggy mi pimpin' erizzle pizzle vehicula&lt;/dd>
+&lt;/dl></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="quotes">
+		<h3>Quotes</h3>
+	</header>
+	<section class="element-one">
+		<blockquote cite="'Book or media' by Authors name here (publisher). Copyright 2014 Author, some crazy number.">
+<p>This is a blockquote, with a citation attribute, which is displayed by pure CSS, so you only have to worry about semantic HTML!</p>
+</blockquote>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;blockquote cite="'Book or media' by Authors name here (publisher). Copyright 2014 Author, some crazy number.">
+	&lt;p>This is a blockquote, with a citation attribute, which is displayed by pure CSS, so you only have to worry about semantic HTML!&lt;/p>
+&lt;/blockquote></code></pre>
+	</section>
+	<section class="element-one">
+		<p>I am <q>saying something inline</q> here.</p>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;p>I am &lt;q>saying something inline&lt;/q> here.&lt;/p></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="code">
+		<h3>Code</h3>
+	</header>
+	<p>Wrap any code in a <code>pre</code> element and a <code>code</code> element</p>
+	<section class="element-one">
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>An example of HTML code&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;!-- CONTENT HERE -->
+&lt;/body>
+&lt;/html></code></pre>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;pre class="language-markup">&lt;code>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>An example of HTML code&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;!-- CONTENT HERE -->
+&lt;/body>
+&lt;/html>&lt;/code>&lt;/pre></code></pre>
+	</section>
+	<p>Notice the class on the pre tag. You can define any language here, like Ruby for instance</p>
+	<section class="element-one">
+		<pre class="language-ruby"><code>def ask_yoda(question)
+	yoda_array = ['do', 'do not']
+	message = yoda_array.join(' or ') + ' there is no ' + question
+	return message unless yoda_array.include?(question)
+	'you are strong with the force'
+end</code></pre>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;pre class="language-ruby">&lt;code>def ask_yoda(question)
+	yoda_array = ['do', 'do not']
+	message = yoda_array.join(' or ') + ' there is no ' + question
+	return message unless yoda_array.include?(question)
+	'you are strong with the force'
+end&lt;/code>&lt;/pre></code></pre>
+	</section>
+</article>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

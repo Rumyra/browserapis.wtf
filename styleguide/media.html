@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Video, Audio, Image">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Media | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar media">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Media</h2>
+<article class="element-copy">
+	<header id="images">
+		<h3>Images</h3>
+	</header>
+	<p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_media.scss">_media.scss</a> for all the styles.</p>
+	<p>A simple include of an inline image goes thus:</p>
+	<section class="element-one">
+		<img src="http://placekitten.com/482/322" alt="A very cute kitten" />
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;img src="http://placekitten.com/482/322" alt="A very cute kitten" /></code></pre>
+	</section>
+	<p>However we now have a wonderful <code>figure</code> tag to wrap media in and give them a caption. If the alt text is a repeat of other text don't include it. (At widescreen setting media is displayed at 50% width).</p>
+	<section class="element-one">
+		<figure>
+      <img src="http://placekitten.com/482/322" />
+      <figcaption>A very cute kitten!</figcaption>
+    </figure>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;figure>
+	&lt;img src="http://placekitten.com/482/322" />
+	&lt;figcaption>A very cute kitten!&lt;/figcaption>
+&lt;/figure></code></pre>
+	</section>
+	<p>You may want to target certain media to make it more of a feature (bigger, flashing borders etc...). Use the <code>.media-feature</code> class.</p>
+	<section class="element-one">
+		<figure class="media-feature">
+      <img src="http://placekitten.com/482/322" />
+      <figcaption>A very cute kitten!</figcaption>
+    </figure>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;figure class="media-feature">
+	&lt;img src="http://placekitten.com/482/322" />
+	&lt;figcaption>A very cute kitten!&lt;/figcaption>
+&lt;/figure></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="audio">
+		<h3>Audio</h3>
+	</header>
+	<p>File types</p>
+	<section class="element-one">
+		<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls>
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls>
+	Your browser does not support the &lt;code>audio&lt;/code> element.
+&lt;/audio></code></pre>
+	</section>
+	<section class="element-one">
+		<audio src="foo.ogg" controls>
+      <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+      <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio src="foo.ogg" controls>
+	&lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+	&lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+&lt;/audio></code></pre>
+	</section>
+	<section class="element-one">
+		<audio controls="controls">
+      Your browser does not support the <code>audio</code> element.
+      <source src="foo.wav" type="audio/wav">
+    </audio>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;audio controls="controls">
+	Your browser does not support the &lt;code>audio&lt;/code> element.
+	&lt;source src="foo.wav" type="audio/wav">
+&lt;/audio></code></pre>
+	</section>
+</article>
+
+<article class="element-copy">
+	<header id="video">
+		<h3>Video</h3>
+	</header>
+	<p>Here are 2 examples of embedding video. File types</p>
+	<section class="element-one">
+		<video src="videofile.ogg" poster="posterimage.jpg" controls>
+      Sorry, your browser doesn't support embedded videos,
+      but don't worry, you can <a href="videofile.ogg">download it</a>
+      and watch it with your favorite video player!
+    </video>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;video src="videofile.ogg" poster="posterimage.jpg" controls>
+	Sorry, your browser doesn't support embedded videos,
+	but don't worry, you can &lt;a href="videofile.ogg">download it&lt;/a>
+	and watch it with your favorite video player!
+&lt;/video></code></pre>
+	</section>
+	<section class="element-one">
+		<video src="foo.ogg" controls="controls">
+      <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+      <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+    </video>
+		<pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;video src="foo.ogg" controls="controls">
+	&lt;track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
+	&lt;track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+&lt;/video></code></pre>
+	</section>
+</article>
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>

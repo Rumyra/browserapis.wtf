@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <!--char set (lang above)-->
+  <meta charset="utf-8">
+  <!--device/browser shizzle-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--meta content-->
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
+  <meta name="keywords" content="The Lab, Forms">
+  <meta name="description" content="Front End Framework for The Lab @ o2">
+  <title>Forms | Front End Framework</title>
+
+
+  <!--Stylesheets (include as necessary)-->
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/pygments.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <!--<link type="text/css" href="styles/print.css" rel="stylesheet" media="print">-->
+
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
+</head>
+
+
+<body class="layout-sidebar forms">
+    <header role="banner">
+    <h1><a href="/" rel="internal">White Paper</a></h1>
+    <nav role="navigation" class="nav-block">
+      <button class="nav-toggle">Show/Hide Nav</button>
+      <ul>
+        <li><a href="/styleguide/main-partials.html" rel="internal">Main Partials</a></li><!--
+        --><li>
+          <a href="/styleguide/typographic-elements.html" rel="internal">Typographic Elements</a>
+            <nav class="nav-sub">
+                <a href="/styleguide/typographic-elements.html#headers">Headers</a>
+                <a href="/styleguide/typographic-elements.html#paragraphs">Paragraphs</a>
+            <a href="/styleguide/typographic-elements.html#formatting">Text Formatting</a>
+            <a href="/styleguide/typographic-elements.html#lists">Lists</a>
+            <a href="/styleguide/typographic-elements.html#quotes">Quotes</a>
+                <a href="/styleguide/typographic-elements.html#code">Code Blocks</a>
+            </nav>
+        </li><!--
+        --><li><a href="/styleguide/forms.html" rel="internal">Forms</a></li><!--
+        --><li><a href="/styleguide/tables.html" rel="internal">Tables</a></li><!--
+        --><li><a href="/styleguide/buttons-icons.html" rel="internal">Buttons & Icons</a></li><!--
+        --><li>
+          <a href="/styleguide/media.html" rel="internal">Media</a>
+          <nav class="nav-sub">
+            <a href="/styleguide/media.html#images">Images</a>
+            <a href="/styleguide/media.html#audio">Audio</a>
+            <a href="/styleguide/media.html#video">Video</a>
+          </nav>
+        </li><!--
+        --><li>
+          <a href="/styleguide/messages-modals.html" rel="internal">Messages & Modals</a>
+          <!--<nav class="nav-sub">
+            <a href="/messages-modals.html#messages">Messages</a>
+            <a href="/messages-modals.html#alerts">Alerts</a>
+            <a href="/messages-modals.html#modals">Modals</a>
+          </nav>-->
+        </li><!--
+        --><li>
+          <a href="/styleguide/navigation.html" rel="internal">Navigation</a>
+            <nav class="nav-sub">
+              <a href="/styleguide/navigation.html#navigation">Navs</a>
+              <a href="/styleguide/navigation.html#breadcrumbs">Breadcrumbs</a>
+              <a href="/styleguide/navigation.html#navigation">Pagination</a>
+              <!-- <a href="">Tabs</a>
+              <a href="">Menus</a> -->
+            </nav>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section role="main">
+
+      <h2>Forms</h2>
+<article class="element-copy">
+  <header id="input-types">
+    <h3>Input types</h3>
+  </header>
+  <p>Check out <a href="https://github.com/o2Labs/White-Paper/blob/master/source/assets/stylesheets/sass/_forms.scss">_forms.scss</a> for all the styles. If you want a quick complete form <a href="#example-forms">check out the example forms</a> at the bottom of this page</p>
+  <p>Before you dive right in copying and pasting the inputs you want, don't forget you need a form! (Don't worry the legend shouldn't be displayed as default, but is always good to have for accessibility).</p>
+  <section class="element-one">
+    <form method="post" action="/">
+      <fieldset><legend>This is a form!</legend>
+        <!--Form inputs here-->
+      </fieldset>
+    </form>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;form method="post" action="/">
+  &lt;fieldset>&lt;legend>This is a form!&lt;/legend>
+    &lt;!--Form inputs here-->
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  </section>
+  <p>You may want instructions or hints throughout the form, just drop in a paragraph with the class <code>.form-instructions</code>.</p>
+  <section class="element-one">
+    <form method="post" action="/">
+      <fieldset><legend>This is a form!</legend>
+        <!--Form inputs can be here-->
+        <p class="form-instructions">Some instructions or hints here: Lorizzle ipsum dolor mofo amet, consectetuer adipiscing fo shizzle my nizzle.</p>
+        <!--Form inputs can be here-->
+      </fieldset>
+    </form>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;form method="post" action="/">
+  &lt;fieldset>&lt;legend>This is a form!&lt;/legend>
+    &lt;!--Form inputs can be here-->
+    &lt;p class="form-instructions">Some instructions or hints here: Lorizzle ipsum dolor mofo amet, consectetuer adipiscing fo shizzle my nizzle.&lt;/p>
+    &lt;!--Form inputs can be here-->
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+    <label for="text-input">Text input</label>
+    <input type="text" name="text-input" id="text-input" placeholder="Some text" />
+    </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="text-input">Text input&lt;/label>
+  &lt;input type="text" name="text-input" id="text-input" placeholder="Some text" />
+&lt;/div></code></pre>
+  </section>
+  <p>If a field needs to be required, just add the <code>.input-required</code> class to the wrapping div. (You'll see this automagically adds an asterix to the label).</p>
+  <section class="element-one">
+    <div class="form-field input-required">
+      <label for="tel-input">Tel input</label>
+      <input type="tel" name="tel-input" id="tel-input" placeholder="+447700900733" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-required">
+  &lt;label for="tel-input">Tel input&lt;/label>
+  &lt;input type="tel" name="tel-input" id="tel-input" placeholder="+447700900733" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="email-input">Email input</label>
+      <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="email-input">Email input&lt;/label>
+  &lt;input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="search-input">Search input</label>
+      <input type="search" name="search-input" id="search-input" placeholder="Search term" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="search-input">Search input&lt;/label>
+  &lt;input type="search" name="search-input" id="search-input" placeholder="Search term" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="url-input">URL input</label>
+      <input type="url" name="url-input" id="url-input" placeholder="http://www.website.com" class="input-error" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="url-input">URL input&lt;/label>
+  &lt;input type="url" name="url-input" id="url-input" placeholder="http://www.website.com" class="input-error" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="password-input">Password input</label>
+      <input type="password" name="password-input" id="password-input" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="password-input">Password input&lt;/label>
+  &lt;input type="password" name="password-input" id="password-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="file-input">File input</label>
+      <input type="file" name="file-input" id="file-input" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="file-input">File input&lt;/label>
+  &lt;input type="file" name="file-input" id="file-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="range-input">Range input</label>
+      <input type="range" name="range-input" id="range-input" min="0" max="20" value="10" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="range-input">Range input&lt;/label>
+  &lt;input type="range" name="range-input" id="range-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <form>
+      <div class="form-field input-range-number">
+        <label for="range-value-input">Range & value input</label>
+        <input type="range" name="rangeInput" min="0" max="20" value="10" id="range-value-input" oninput="this.form.numberInput.value=this.value" />
+        <input type="number" name="numberInput" min="0" max="20" value="10" oninput="this.form.rangeInput.value=this.value" />
+      </div>
+    </form>
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="range-value-input">Range & value input&lt;/label>
+  &lt;input type="range" name="rangeInput" min="0" max="20" value="10" id="range-value-input" oninput="this.form.numberInput.value=this.value" />
+  &lt;input type="number" name="numberInput" min="0" max="20" value="10" oninput="this.form.rangeInput.value=this.value" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="select-element">Select element</label>
+      <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Both</option>
+          <option>Neither</option>
+      </select>
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="select-element">Select element&lt;/label>
+  &lt;select>
+    &lt;option>Male&lt;/option>
+    &lt;option>Female&lt;/option>
+    &lt;option>Both&lt;/option>
+    &lt;option>Neither&lt;/option>
+  &lt;/select>
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field">
+      <label for="textarea-element">Textarea element</label>
+      <textarea cols="20" rows="5">Some writing usually goes in a text area</textarea>
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field">
+  &lt;label for="textarea-element">Textarea element&lt;/label>
+  &lt;textarea cols="20" rows="5">Some writing usually goes in a text area&lt;/textarea>
+&lt;/div></code></pre>
+  </section>
+  <h5>Note the special classes on the wrapping divs in this next lot  of inputs.</h5>
+  <section class="element-one">
+    <div class="form-field input-radio">
+        <label for="radio-input">Radio input</label>
+        <input type="radio" name="radio-input" id="radio-input" value="Male" />
+        <span>Option one</span>
+        <input type="radio" name="radio-input" value="Female" />
+        <span>Option two</span>
+    </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-radio">
+  &lt;label for="radio-input">Radio input&lt;/label>
+  &lt;input type="radio" name="radio-input" id="radio-input" value="Male" />
+  &lt;span>Option one&lt;/span>
+  &lt;input type="radio" name="radio-input" value="Female" />
+  &lt;span>Option two&lt;/span>
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field input-checkbox">
+      <label for="check-input">Checkbox input</label>
+      <input type="checkbox" name="check-input" id="check-input" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-checkbox">
+  &lt;label for="check-input">Checkbox input&lt;/label>
+  &lt;input type="checkbox" name="check-input" id="check-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field input-date">
+      <label for="date-input">Date input</label>
+      <input type="date" name="date-input" id="date-input" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-date">
+  &lt;label for="date-input">Date input&lt;/label>
+  &lt;input type="date" name="date-input" id="date-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field input-colour">
+      <label for="color-input">Colour input</label>
+      <input type="color" name="color-input" id="color-input" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-colour">
+  &lt;label for="color-input">Colour input&lt;/label>
+  &lt;input type="color" name="color-input" id="color-input" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field input-number">
+      <label for="number-input">Number input</label>
+      <input type="number" name="number-input" id="number-input" min="0" max="10" />
+  </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-number">
+  &lt;label for="number-input">Number input&lt;/label>
+  &lt;input type="number" name="number-input" id="number-input" min="0" max="10" />
+&lt;/div></code></pre>
+  </section>
+  <p>To see a full selection of button style inputs please see <a href="/buttons-icons.html">Buttons & Icons</a>.
+  <section class="element-one">
+    <input type="submit" value="Submit input" />
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;input type="submit" value="Submit input" /></code></pre>
+  </section>
+  <section class="element-one">
+    <button type="submit">A button that submits</button>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;button type="submit">A button that submits&lt;/button></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="errors-success">
+    <h3>Errors And Successes</h3>
+  </header>
+  <p>To add success or error styling to inputs just add <code>.input-success</code> or <code>.input-error</code> classes to the wrapping div.
+  <section class="element-one">
+    <div class="form-field input-success">
+    <label for="text-input">Text input</label>
+    <input type="text" name="text-input" id="text-input" placeholder="Some text" />
+    </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-success">
+  &lt;label for="text-input">Text input&lt;/label>
+  &lt;input type="text" name="text-input" id="text-input" placeholder="Some text" />
+&lt;/div></code></pre>
+  </section>
+  <section class="element-one">
+    <div class="form-field input-error">
+    <label for="text-input">Text input</label>
+    <input type="text" name="text-input" id="text-input" placeholder="Some text" />
+    </div>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;div class="form-field input-error">
+  &lt;label for="text-input">Text input&lt;/label>
+  &lt;input type="text" name="text-input" id="text-input" placeholder="Some text" />
+&lt;/div></code></pre>
+  </section>
+  <p>For a form success or error message just create a paragraph with the relevant class:</p>
+  <section class="element-one">
+    <p class="form-error">You're an idiot, you can't fill out a form correctly. Try again *sigh*</p>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;p class="form-error">You're an idiot, you can't fill out a form correctly. Try again *sigh*&lt;/p></code></pre>
+  </section>
+  <section class="element-one">
+    <p class="form-success">You're brilliant! The form was filled out perfectly :)</p>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;p class="form-success">You're brilliant! The form was filled out perfectly :)&lt;/p></code></pre>
+  </section>
+</article>
+
+<article class="element-copy">
+  <header id="example-forms">
+    <h3>Example forms</h3>
+  </header>
+  <p>The default form layout is full width form. For smaller forms try a half width form (see below).</p>
+  <section class="element-one">
+    <form method="post" action="/">
+      <fieldset><legend>Register</legend>
+        <div class="form-field">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" />
+      </div>
+        <div class="form-field">
+          <label for="email-input">Email input</label>
+          <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+        </div>
+        <div class="form-field">
+          <label for="password-input">Password</label>
+          <input type="password" name="password-input" id="password-input" />
+        </div>
+        <div class="form-field">
+          <label for="reenter-password">Re-enter password</label>
+          <input type="password" name="reenter-password" id="reenter-password" />
+        </div>
+        <input type="submit" value="Register" />
+      </fieldset>
+    </form>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;form method="post" action="/">
+  &lt;fieldset>&lt;legend>Register&lt;/legend>
+    &lt;div class="form-field">
+      &lt;label for="full-name">Full Name&lt;/label>
+      &lt;input type="text" name="full-name" id="full-name" placeholder="Joe Bloggs" />
+    &lt;/div>
+    &lt;div class="form-field">
+      &lt;label for="email-input">Email input&lt;/label>
+      &lt;input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+    &lt;/div>
+    &lt;div class="form-field">
+      &lt;label for="password-input">Password&lt;/label>
+      &lt;input type="password" name="password-input" id="password-input" />
+    &lt;/div>
+    &lt;div class="form-field">
+      &lt;label for="reenter-password">Re-enter password&lt;/label>
+      &lt;input type="password" name="reenter-password" id="reenter-password" />
+    &lt;/div>
+    &lt;input type="submit" value="Register" />
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  </section>
+  <p>Add the class<code>.form-small</code> for forms with less fields.</p>
+  <section class="element-one">
+    <form method="post" action="/" class="form-small">
+      <fieldset><legend>Sign In</legend>
+        <div class="form-field">
+          <label for="email-input">Email</label>
+          <input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+        </div>
+        <div class="form-field">
+          <label for="password-input">Password</label>
+          <input type="password" name="password-input" id="password-input" />
+        </div>
+        <input type="submit" value="Login" />
+      </fieldset>
+    </form>
+    <pre class="language-markup"><button class="icon-before i-copy">Copy to Clipboard</button><code>&lt;form method="post" action="/" class="form-small">
+  &lt;fieldset>&lt;legend>Sign In&lt;/legend>
+    &lt;div class="form-field">
+      &lt;label for="email-input">Email&lt;/label>
+      &lt;input type="email" name="email-input" id="email-input" placeholder="example@domain.com" />
+    &lt;/div>
+    &lt;div class="form-field">
+      &lt;label for="password-input">Password&lt;/label>
+      &lt;input type="password" name="password-input" id="password-input" />
+    &lt;/div>
+    &lt;input type="submit" value="Login" />
+  &lt;/fieldset>
+&lt;/form></code></pre>
+  </section>
+  <!--<p>For an inline form just add the class <code>.form-inline</code>.</p>
+  <section class="element-one">
+    <form method="post" action="/" class="form-inline">
+      <fieldset><legend>This is a form!</legend>
+        <div class="form-field">
+          <label for="search-input">Search</label>
+          <input type="search" name="search-input" id="search-input" placeholder="Search term" />
+        </div>
+        <input type="submit" value="Submit input" class="i-search icon" />
+      </fieldset>
+    </form>
+    <pre class="language-markup"><code>&lt;form method="post" action="/" class="form-inline">
+&lt;fieldset>&lt;legend>This is a form!&lt;/legend>
+  &lt;div class="form-field">
+  &lt;label for="search-input">Search&lt;/label>
+  &lt;input type="search" name="search-input" id="search-input" placeholder="Search term" />
+&lt;/div>
+&lt;input type="submit" value="Submit input" class="i-search icon" />
+&lt;/fieldset>
+&lt;/form></code></pre>
+    <button class="clipboard">Copy to Clipboard</button>
+  </section>
+  <!-- <section class="element-one">
+
+    <pre class="language-markup"><code></code></pre>
+    <button class="clipboard">Copy to Clipboard</button>
+  </section> -->
+</article>
+
+
+
+  </section>
+
+  <footer>
+  <p>Originally conceived and built by <a href="">Ruth John</a> with help from <a href="">Ben Scott</a></p><!--
+  --><nav>
+    <a href="https://github.com/Rumyra/web-apis" rel="external">Contribute</a>
+  </nav>
+</footer>
+
+  <script src="/assets/javascripts/prism.js"></script>
+<script src="/assets/javascripts/zeroClipboard/ZeroClipboard.min.js"></script>
+<script>
+
+// set up zero clipboard for copy and paste
+ZeroClipboard.config( { swfPath: "/assets/javascripts/zeroClipboard/ZeroClipboard.swf" } );
+
+// before prism adds syntax highlighting, grab the code to copy, attach it to the copy icon, copy said code to clipboard when icon is clicked
+Prism.hooks.add('before-insert', function() {
+
+  var allCodeSnippets = document.getElementsByTagName('pre');
+
+  for (var i = 0; i < allCodeSnippets.length; i++) {
+    
+    var copyButton = allCodeSnippets[i].firstChild;
+    var client = new ZeroClipboard(copyButton);
+
+    var copyText = allCodeSnippets[i].lastChild.innerText;
+    doCopy(client, copyText);
+  };
+
+});
+
+function doCopy(client, textToCopy) {
+  client.on( 'ready', function(event) {
+    // console.log( 'movie is loaded' );
+
+    client.on( 'copy', function(event) {
+      event.clipboardData.setData('text/plain', textToCopy);
+    } );
+
+    client.on( 'aftercopy', function(event) {
+    } );
+  } );
+
+  client.on( 'error', function(event) {
+    console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+    ZeroClipboard.destroy();
+  } );
+}
+
+</script>
+
+
+</body>
+</html>
