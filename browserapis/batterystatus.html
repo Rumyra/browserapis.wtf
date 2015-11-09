@@ -13,9 +13,9 @@
 
   <meta name="author" content="Ruth John (@rumyra) and Ben Scott (@BPScott)">
   <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
-  <meta name="keywords" content="Web, Browser APIs, Device APIs, Web APIs, APIs, HTML, Javascript, Resource, Javascript APIs">
-  <meta name="description" content="A website showcasing all the new borwser APIs, their code examples and further details about them.">
-  <title>Home | Browser APIs</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Battery Status API</title>
   
   <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
   <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
@@ -28,7 +28,7 @@
 </head>
 
 
-<body class="index">
+<body class="">
 
     <header role="banner">
     <h1><a href="/">Browser APIs</a></h1>
@@ -40,92 +40,59 @@
 
   <section role="main">
 
-    <ul class="list-panel">
+    
+<article class="api-detail">
 
-  <li>
-  <a href="/browserapis/ambient.html">
-    <h4>Ambient Light Event</h4>
-    <p>Returns the lux value detected by the devices camera.</p>
-  </a>
-</li>
+  <h2>Battery Status API</h2>
+  <h5>Provides information about the battery status of the hosting device.</h2>
 
+  <div class="api-links">
+    <section class="links-main">
+      <h4>Docs</h4>
+      <ul>
+        <li><a href="http://www.w3.org/TR/battery-status/">Candidate Recommendation (Dec '14)</a></li>
+        <li><a href="http://caniuse.com/#feat=battery-status">Battery Status API support on caniuse.com</a></li>
+        <li><a href="https://developer.mozilla.org/en/docs/Web/API/Battery_Status_API">Battery Status API on MDN Docs</a></li>
+        <li><a href="">Battery Status API on Web Platform Docs</a><li>
+      </ul>
+    </section>
 
+      <section class="links-tuts-arts">
+        <h4>Articles & Tutorials</h4>
+        <ul>
+          <li><a href="http://www.sitepoint.com/html5-battery-status-api/">Sitepoint: How to use the HTML5 Battery Status API</a></li>
+        </ul>
+      </section>
 
-  <li>
-  <a href="/browserapis/animation.html">
-    <h4>Web Animation API</h4>
-    <p>Specifying and controlling an animation.</p>
-  </a>
-</li>
+      <section class="links-examples">
+        <h4>Demos & Examples</h4>
+        <ul>
+          <li><a href="http://pazguille.github.io/demo-battery-api/">Guille Paz's Demo</a></li>
+        </ul>
+      </section>
+  </div>
 
+  <div class="api-uses">
+    <section class="uses">
+      <h4>Uses</h4>
+      <ul>
+        <li>Involved content, such as video viewing or gaming, to alert user of low battery.</li>
+        <li>Also returns whether charging - possibilities there</li>
+      </ul>
+    </section>
+  </div>  
 
+  <div class="api-code">
 
-  <li>
-  <a href="/browserapis/audio.html">
-    <h4>Web Audio API</h4>
-    <p>Allows manipulation and analysation of audio data (files or streams), as well as play back controls.</p>
-  </a>
-</li>
+    <pre class="highlight javascript"><code><span class="c1">// just write code here</span>
 
-
-
-  <li>
-  <a href="/browserapis/batterystatus.html">
-    <h4>Battery Status API</h4>
-    <p>Provides information about the battery status of the hosting device.</p>
-  </a>
-</li>
-
-
-
-  <li>
-  <a href="/browserapis/deviceorientation.html">
-    <h4>Device Orientation API</h4>
-    <p>Returns values on the device's position & orientation.</p>
-  </a>
-</li>
-
-
-
-  
-
-
-  <li>
-  <a href="/browserapis/geolocation.html">
-    <h4>Geolocation API</h4>
-    <p>User grants access their to device location, accessible via lat/long co-ords.</p>
-  </a>
-</li>
+</code></pre>
 
 
+  </div>
 
-  <li>
-  <a href="/browserapis/mediastream.html">
-    <h4>Media Stream API</h4>
-    <p>User grants access to stream device media, usually either camera and/or microphone.</p>
-  </a>
-</li>
+</article>
 
-
-
-  <li>
-  <a href="/browserapis/screenorientation.html">
-    <h4>Screen Orientation</h4>
-    <p>Returns the screen type and angle. Informs state change and ability to lock.</p>
-  </a>
-</li>
-
-
-
-  <li>
-  <a href="/browserapis/vibration.html">
-    <h4>Vibration API</h4>
-    <p>Causes the device to vibrate.</p>
-  </a>
-</li>
-
-
-</ul>
 
 
   </section>
