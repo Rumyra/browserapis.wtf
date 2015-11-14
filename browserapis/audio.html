@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lt IE 9]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gte IE 9]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <!--char set (lang above)-->
   <meta charset="utf-8">
@@ -44,7 +45,7 @@
 <article class="api-detail">
 
   <h2>Web Audio API</h2>
-  <h5>Allows manipulation and analysation of audio data (files or streams), as well as play back controls.</h2>
+  <h5>Allows manipulation and analysation of audio data (files or streams), as well as play back controls.</h5>
 
   <div class="api-links">
     <section class="links-main">
@@ -53,7 +54,8 @@
         <li><a href="http://webaudio.github.io/web-audio-api/">W3C Editors Draft</a></li>
         <li><a href="http://caniuse.com/#feat=audio-api">Web Audio API support on caniuse.com</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API on MDN Docs</a></li>
-        <li><a href="https://docs.webplatform.org/wiki/apis/webaudio">Web Audio API on Web Platform Docs</a><li>
+        <li><a href="https://docs.webplatform.org/wiki/apis/webaudio">Web Audio API on Web Platform Docs</a></li>
+
       </ul>
     </section>
 
@@ -86,6 +88,7 @@
   </div>  
 
   <div class="api-code">
+      <h4>Example</h4>
 
     <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">audioContext</span> <span class="o">=</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">AudioContext</span> <span class="o">||</span> 
 <span class="nb">window</span><span class="p">.</span><span class="nx">webkitAudioContext</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">mozAudioContext</span><span class="p">);</span>

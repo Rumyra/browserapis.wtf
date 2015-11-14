@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lt IE 9]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gte IE 9]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <!--char set (lang above)-->
   <meta charset="utf-8">
@@ -44,7 +45,7 @@
 <article class="api-detail">
 
   <h2>Media Stream API</h2>
-  <h5>User grants access to stream device media, usually either camera and/or microphone.</h2>
+  <h5>User grants access to stream device media, usually either camera and/or microphone.</h5>
 
   <div class="api-links">
     <section class="links-main">
@@ -53,7 +54,8 @@
         <li><a href="http://www.w3.org/TR/mediacapture-streams/">W3C Working Draft Feb '15</a></li>
         <li><a href="http://caniuse.com/#feat=stream">Media Stream API support on caniuse.com</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaStream">Media Stream API on MDN Docs</a></li>
-        <li><a href="">Media Stream API on Web Platform Docs</a><li>
+        <li><a href="https://docs.webplatform.org/wiki/apis/media_capture_and_streams/MediaStream">Media Stream API on Web Platform Docs</a></li>
+
       </ul>
     </section>
 
@@ -79,11 +81,14 @@
       <h4>Uses</h4>
       <ul>
         <li>Use with WebRTC for voice and video calls</li>
+        <li>Picking up on users ambient sound</li>
+        <li>Camera applications</li>
       </ul>
     </section>
   </div>  
 
   <div class="api-code">
+      <h4>Example</h4>
 
     <pre class="highlight javascript"><code><span class="c1">// FYI vendor prefixes are still needed</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">getUserMedia</span><span class="p">)</span> <span class="p">{</span>

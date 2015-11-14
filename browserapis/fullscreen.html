@@ -16,7 +16,7 @@
   <meta name="dcterms.rightsHolder" content="Built by Ruth John & Ben Scott, United Kingdom, 2015">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <title>Geolocation API</title>
+  <title>Fullscreen API</title>
   
   <link href='http://fonts.googleapis.com/css?family=Oxygen:700,400,300' rel='stylesheet' type='text/css'>
   <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
@@ -44,17 +44,17 @@
     
 <article class="api-detail">
 
-  <h2>Geolocation API</h2>
-  <h5>User grants access their to device location, accessible via lat/long co-ords.</h5>
+  <h2>Fullscreen API</h2>
+  <h5>Allows an element to be displayed covering the entire screen</h5>
 
   <div class="api-links">
     <section class="links-main">
       <h4>Docs</h4>
       <ul>
-        <li><a href="http://www.w3.org/TR/geolocation-API/">W3C Recommendation (Oct '13)</a></li>
-        <li><a href="http://caniuse.com/#feat=geolocation">Geolocation API support on caniuse.com</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API on MDN Docs</a></li>
-        <li><a href="https://docs.webplatform.org/wiki/apis/geolocation">Geolocation API on Web Platform Docs</a></li>
+        <li><a href="https://fullscreen.spec.whatwg.org/">Fullscreen Living Standard</a></li>
+        <li><a href="http://caniuse.com/#feat=fullscreen">Fullscreen API support on caniuse.com</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen API on MDN Docs</a></li>
+        <li><a href="https://docs.webplatform.org/wiki/dom/Element/requestFullscreen">Fullscreen API on Web Platform Docs</a></li>
 
       </ul>
     </section>
@@ -62,29 +62,22 @@
       <section class="links-tuts-arts">
         <h4>Articles & Tutorials</h4>
         <ul>
-          <li><a href="http://www.smashingmagazine.com/2010/03/08/entering-the-wonderful-world-of-geo-location/">Entering The Wonderful World of Geolocation</a></li>
-          <li><a href="http://www.html5rocks.com/en/tutorials/geolocation/trip_meter/">A Simple Trip Meter using the Geolocation API</a></li>
+          <li><a href="http://davidwalsh.name/fullscreen">Fullscreen API</a></li>
         </ul>
       </section>
 
-      <section class="links-examples">
-        <h4>Demos & Examples</h4>
-        <ul>
-          <li><a href="http://playground.html5rocks.com/#get_current_position">Instigates a new instance of google maps and shows users location on it.</a></li>
-          <li><a href="https://thedotproduct.org/experiments/geo/">Example using the <i>watchPosition</i> method.</a></li>
-        </ul>
-      </section>
   </div>
 
   <div class="api-uses">
     <section class="uses">
       <h4>Uses</h4>
       <ul>
-        <li>Location based services</li>
-        <li>User tailored content based on location</li>
-        <li>Navigation/Sat Nav systems</li>
-        <li>From me to you (delivery/journey time)</li>
-        <li>Better cultural content (not just based on lang)</li>
+        <li>Displaying video at maximum size</li>
+        <li>Games</li>
+        <li>Talks</li>
+        <li>Projections</li>
+        <li>Second screen functionality</li>
+        <li>Apps</li>
       </ul>
     </section>
   </div>  
@@ -92,27 +85,18 @@
   <div class="api-code">
       <h4>Example</h4>
 
-    <pre class="highlight javascript"><code><span class="c1">// Is geolocation supported?</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">)</span> <span class="p">{</span>
-  
-  <span class="c1">// get current position</span>
-  <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span>
-     
-    <span class="c1">// to run on success</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">lat</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
-      <span class="kd">var</span> <span class="nx">lon</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
-      <span class="kd">var</span> <span class="nx">accuracy</span> <span class="o">=</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">accuracy</span><span class="p">;</span>
-      <span class="c1">// there is also altitude, altitude accuaracy, heading and speed methods</span>
-    <span class="p">},</span>
-    <span class="c1">// to run on fail</span>
-    <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">'no position found'</span><span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">}</span>
-
-<span class="c1">// as well as the above there are is a watchPosition method - see the links for more info</span>
-
+    <pre class="highlight javascript"><code><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'fullscreenButtonClick'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"display"</span><span class="p">);</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">requestFullscreen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">requestFullscreen</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">mozRequestFullScreen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">mozRequestFullScreen</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">webkitRequestFullscreen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">webkitRequestFullscreen</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">msRequestFullscreen</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">msRequestFullscreen</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">});</span>
 </code></pre>
 
 

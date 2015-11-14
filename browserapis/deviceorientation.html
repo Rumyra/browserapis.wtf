@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lt IE 9]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gte IE 9]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <!--char set (lang above)-->
   <meta charset="utf-8">
@@ -44,57 +45,28 @@
 <article class="api-detail">
 
   <h2>Device Orientation API</h2>
-  <h5>Returns values on the device's position & orientation.</h2>
+  <h5>Returns values on the device's position & orientation.</h5>
 
   <div class="api-links">
     <section class="links-main">
       <h4>Docs</h4>
       <ul>
-        <li><a href=""></a></li>
-        <li><a href="">Device Orientation API support on caniuse.com</a></li>
-        <li><a href="">Device Orientation API on MDN Docs</a></li>
-        <li><a href="">Device Orientation API on Web Platform Docs</a><li>
+        <li><a href="http://w3c.github.io/deviceorientation/spec-source-orientation.html">W3C Editor's Draft</a></li>
+        <li><a href="http://caniuse.com/#feat=deviceorientation">Device Orientation API support on caniuse.com</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation">Device Orientation API on MDN Docs</a></li>
+        <li><a href="https://docs.webplatform.org/wiki/apis/device_orientation">Device Orientation API on Web Platform Docs</a></li>
+
       </ul>
     </section>
 
-      <section class="links-tuts-arts">
-        <h4>Articles & Tutorials</h4>
-        <ul>
-          <li><a href="http://code.tutsplus.com/tutorials/html5-vibration-api--mobile-22585">HTML5: Vibration API</a></li>
-        </ul>
-      </section>
 
-      <section class="links-examples">
-        <h4>Demos & Examples</h4>
-        <ul>
-          <li><a href="http://davidwalsh.name/demo/vibrate.php">Vibration demo by David Walsh</a></li>
-          <li><a href="http://codepo8.github.io/mozVibrate-polyfill/">Browser Polyfill by Christian Heilmann</a></li>
-        </ul>
-      </section>
   </div>
 
-  <div class="api-uses">
-    <section class="uses">
-      <h4>Uses</h4>
-      <ul>
-        <li>Haptic user feedback, for successes, errors or just general page interactions</li>
-        <li>Feeling sound</li>
-        <li>Morse code</li>
-      </ul>
-    </section>
-  </div>  
 
   <div class="api-code">
+      <h4>Example</h4>
 
-    <pre class="highlight javascript"><code><span class="k">if</span> <span class="p">(</span><span class="s1">'vibrate'</span> <span class="k">in</span> <span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>
-   <span class="c1">// Vibrate once for one second</span>
-   <span class="nx">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-   <span class="c1">// Vibrate in sequence of 'on' then 'off' as specified in ms</span>
-   <span class="nx">navigator</span><span class="p">.</span><span class="nx">vibrate</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">2000</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">2000</span><span class="p">]);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-   <span class="c1">// Not supported</span>
-   <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">'Vibrate not supported'</span><span class="p">)</span>
-<span class="p">}</span>
+    <pre class="highlight javascript"><code>
 </code></pre>
 
 

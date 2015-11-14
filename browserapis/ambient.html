@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<!--[if lt IE 9]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gte IE 9]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <!--char set (lang above)-->
   <meta charset="utf-8">
@@ -44,7 +45,7 @@
 <article class="api-detail">
 
   <h2>Ambient Light Event</h2>
-  <h5>Returns the lux value detected by the devices camera.</h2>
+  <h5>Returns the lux value detected by the devices camera.</h5>
 
   <div class="api-links">
     <section class="links-main">
@@ -53,7 +54,8 @@
         <li><a href="http://w3c.github.io/ambient-light/">W3C Editors Draft</a></li>
         <li><a href="http://caniuse.com/#feat=ambient-light">Ambient Light Event support on caniuse.com</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceLightEvent">Ambient Light Event on MDN Docs</a></li>
-        <li><a href="">Ambient Light Event on Web Platform Docs</a><li>
+        <li><a href="https://docs.webplatform.org/wiki/apis/ambient_light">Ambient Light Event on Web Platform Docs</a></li>
+
       </ul>
     </section>
 
@@ -82,6 +84,7 @@
   </div>  
 
   <div class="api-code">
+      <h4>Example</h4>
 
     <pre class="highlight javascript"><code><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'devicelight'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
