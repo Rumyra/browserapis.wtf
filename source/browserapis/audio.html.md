@@ -1,11 +1,14 @@
 ---
 title: Web Audio API
 short_description: Allows manipulation and analysation of audio data (files or streams), as well as play back controls.
+tags: media, audio, distotion, analysis, 
+
 w3c_status: W3C Editors Draft
 w3c_link: http://webaudio.github.io/web-audio-api/
 caniuse: http://caniuse.com/#feat=audio-api
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 web_platform: https://docs.webplatform.org/wiki/apis/webaudio
+
 links_tutsarts:
   'OReilly Web Audio API Book, by Boris Smus' : http://chimera.labs.oreilly.com/books/1234000001552/index.html
   'Getting Started with Web Audio API' : http://www.html5rocks.com/en/tutorials/webaudio/intro/
