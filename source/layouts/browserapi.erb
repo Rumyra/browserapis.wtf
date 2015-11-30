@@ -5,6 +5,19 @@
   <h2><%= current_page.data.title %></h2>
   <h5><%= current_page.data.short_description %></h5>
 
+  <% if current_page.data.suggested_uses %>
+  <div class="api-uses">
+    <section class="uses">
+      <h4>Uses</h4>
+      <ul>
+      <% current_page.data.suggested_uses.each do |use| %>
+        <li><%= use %></li>
+      <% end %>
+      </ul>
+    </section>
+  </div>  
+  <% end %>
+
   <div class="api-links">
     <section class="links-main">
       <h4>Docs</h4>
@@ -41,19 +54,6 @@
       </section>
     <% end %>
   </div>
-
-  <% if current_page.data.suggested_uses %>
-  <div class="api-uses">
-    <section class="uses">
-      <h4>Uses</h4>
-      <ul>
-      <% current_page.data.suggested_uses.each do |use| %>
-        <li><%= use %></li>
-      <% end %>
-      </ul>
-    </section>
-  </div>  
-  <% end %>
 
   <div class="api-code">
       <h4>Example</h4>

@@ -4,7 +4,7 @@ Web site categorising all the browser apis - their code, resources, w3c status a
 
 **And most specifically use cases.**
 
-## This is for everyone, so please feel free to contribute!
+## This is for everyone, so please feel free to contribute! The main remit is just add an API or update an existing one with more content :D
 
 ### Get up and running
 
