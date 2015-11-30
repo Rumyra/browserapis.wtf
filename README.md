@@ -27,7 +27,7 @@ Apis can be found in source/browserapis/
 
 To amend just choose the right file and edit the info - it's pretty straight forward but ask if you need help :)
 
-To create a new file for a new api, open exampleapi.html.erb and RESAVE it with the name of the API to add.
+To create a new file for a new api, open exampleapi.html.md and RESAVE it with the name of the API to add.
 
 Edit the info inside the file, it'll automatically be listed on the homepage.
 
