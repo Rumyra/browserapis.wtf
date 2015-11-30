@@ -3,7 +3,7 @@
 Thanks for considering a contribution to browserapis.wtf :zap:!
 
 There are many ways you can get involved with contributing here.
-But first, read our Code of Conduct.
+But first, read our [Code of Conduct](CODEOFCONDUCT.md).
 
 ## How to run the website locally
 
