@@ -21,16 +21,19 @@ suggested_uses:
   - Navigation/Sat Nav systems
   - From me to you (delivery/journey time)
   - Better cultural content (not just based on lang)
+
+available_check:
+  'navigator.geolocation'
 ---
 
 
 ```js
 // Is geolocation supported?
 if (navigator.geolocation) {
-  
+
   // get current position
   navigator.geolocation.getCurrentPosition(
-     
+
     // to run on success
     function(position) {
       var lat = position.coords.latitude;

@@ -2,7 +2,10 @@
 
 <article class="api-detail">
 
-  <h2><%= current_page.data.title %></h2>
+  <h2>
+    <%= current_page.data.title %>
+    <span id="availability" title="Availability in browser unknown"></span>
+  </h2>
   <h5><%= current_page.data.short_description %></h5>
 
   <% if current_page.data.suggested_uses %>
@@ -15,7 +18,7 @@
       <% end %>
       </ul>
     </section>
-  </div>  
+  </div>
   <% end %>
 
   <div class="api-links">
@@ -63,5 +66,18 @@
   </div>
 
 </article>
+
+<script>
+  function checkFeatureAvailability(test) {
+    if (arguments.length) {
+      if(test) {
+        document.getElementById('availability').setAttribute('title', 'Available in this browser');
+      } else {
+        document.getElementById('availability').setAttribute('title', 'Not available in this browser');
+      }
+    }
+  }
+  checkFeatureAvailability(<%=current_page.data.available_check%>);
+</script>
 
 <% end %>

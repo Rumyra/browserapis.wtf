@@ -19,6 +19,9 @@ suggested_uses:
   - Use with WebRTC for voice and video calls
   - Picking up on users ambient sound
   - Camera applications
+
+available_check:
+  'navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia'
 ---
 
 
