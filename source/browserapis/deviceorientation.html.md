@@ -10,11 +10,29 @@ mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orie
 web_platform: https://docs.webplatform.org/wiki/apis/device_orientation
 
 links_tutsarts:
+  'HTML5 Rocks Device Orientation Tutorial' : http://www.html5rocks.com/en/tutorials/device/orientation/
 links_examples:
+  'HTML5 Rocks Device Orientation Example' : http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html
 suggested_uses:
+  - Virtual Reality with Google Cardboard
 ---
 
 
 ```js
-
+// If the 'DeviceOrientationEvent' exists
+if (window.DeviceOrientationEvent) {
+  // Add an event listener for the 'deviceorientation' event
+  window.addEventListener('deviceorientation',
+    function (e) {
+      // Do something with the data...
+      // gamma is the left-to-right tilt in degrees, where right is positive
+      console.log(e.gamma);
+      // beta is the front-to-back tilt in degrees, where front is positive
+      console.log(e.beta);
+      // alpha is the compass direction the device is facing in degrees
+      console.log(e.alpha);
+    },
+    false
+  );
+}
 ```
