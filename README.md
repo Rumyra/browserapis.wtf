@@ -1,6 +1,6 @@
-# Browser Apis dot WTF
+# Browser APIs dot WTF
 
-Web site categorising all the browser apis - their code, resources, w3c status and other links.
+Web site categorising all the browser APIs - their code, resources, w3c status and other links.
 
 **And most specifically use cases.**
 
@@ -23,11 +23,11 @@ Site should be running locally on port 4567 (goto localhost:4567 in browser)
 
 ### To add or amend APIs
 
-Apis can be found in source/browserapis/
+APIs can be found in source/browserapis/
 
 To amend just choose the right file and edit the info - it's pretty straight forward but ask if you need help :)
 
-To create a new file for a new api, open exampleapi.html.md and RESAVE it with the name of the API to add.
+To create a new file for a new API, open exampleapi.html.md and RESAVE it with the name of the API to add.
 
 Edit the info inside the file, it'll automatically be listed on the homepage.
 
@@ -37,4 +37,3 @@ Thank you, you're awesome :D
 
 
 Built by [@Rumyra](https://twitter.com/Rumyra) with help from [@BPScott](https://twitter.com/BPScott)
-
