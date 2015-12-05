@@ -19,9 +19,6 @@ links_examples:
 suggested_uses:
   - Involved content, such as video viewing or gaming, to alert user of low battery.
   - Also returns whether charging - possibilities there
-notes:
-  - The value 'Infinity' for chargingTime means either the device is currently discharging or the system was unable to report the value.
-  - The value 'Infinity' for dischargingTime means either the device is currently charging or the system was unable to report the value.
 ---
 
 
@@ -56,3 +53,5 @@ if("getBattery" in navigator) {
 }
 
 ```
+- The value `Infinity` for `chargingTime` means either the device is currently discharging or the system was unable to report the value.
+- The value `Infinity` for `dischargingTime` means either the device is currently charging or the system was unable to report the value.
