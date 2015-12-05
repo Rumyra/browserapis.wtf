@@ -12,7 +12,6 @@ web_platform: https://docs.webplatform.org/wiki/apis/proximity
 
 links_tutsarts:
   'Sitepoint: Introducing the Proximity API' : http://www.sitepoint.com/introducing-proximity-api/
-  'Describe the link please :)' : http://weallloveapis.com
 links_examples:
   'Proximity API Demo by Aurelio De Rosa': http://www.audero.it/demo/proximity-api-demo.html
 suggested_uses:
