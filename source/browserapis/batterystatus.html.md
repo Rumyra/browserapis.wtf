@@ -9,13 +9,14 @@ w3c_status: Candidate Recommendation (Dec '14)
 w3c_link: http://www.w3.org/TR/battery-status/
 caniuse: http://caniuse.com/#feat=battery-status
 mdn_docs: https://developer.mozilla.org/en/docs/Web/API/Battery_Status_API
-web_platform: #
+web_platform: https://docs.webplatform.org/wiki/apis/battery_status
 
 
 links_tutsarts:
   'Sitepoint: How to use the HTML5 Battery Status API' : http://www.sitepoint.com/html5-battery-status-api/
 links_examples:
   "Guille Paz's Demo": http://pazguille.github.io/demo-battery-api/
+
 suggested_uses:
   - Involved content, such as video viewing or gaming, to alert user of low battery.
   - Also returns whether charging - possibilities there
