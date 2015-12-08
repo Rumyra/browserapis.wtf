@@ -12,8 +12,14 @@ Fork the repo
 
 I'm a Middleman site, the standard setup applies:
 
+#### Install dependencies
+
+First you will need to install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (ships with OS X so if your on a Mac your good to go), after which you can open your terminal and
+use these commands to setup Middleman.
+
 ```
-# Install Dependencies
+# Install Bundler and the Middleman dependencies
+gem install bundler
 bundle install
 # Run the Middleman server, watching for any changes
 bundle exec middleman
@@ -35,5 +41,10 @@ Edit the info inside the file, it'll automatically be listed on the homepage.
 
 Thank you, you're awesome :D
 
-
 Built by [@Rumyra](https://twitter.com/Rumyra) with help from [@BPScott](https://twitter.com/BPScott)
+
+### Useful Links
+
+* [Licence](LICENSE)
+* [Contibuting tips](CONTRIBUTING.md)
+* [Code of conduct](CODEOFCONDUCT.md)
