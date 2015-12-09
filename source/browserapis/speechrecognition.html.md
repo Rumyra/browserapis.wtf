@@ -13,7 +13,8 @@ web_platform: #
 
 
 links_tutsarts:
-  #
+  'The HTML5 Speech Recognition API' : http://shapeshed.com/html5-speech-recognition-api/
+  'Introducing the Web Speech API' : http://www.sitepoint.com/introducing-web-speech-api/
 links_examples:
   #
 suggested_uses:
