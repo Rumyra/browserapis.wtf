@@ -33,11 +33,14 @@ body > footer {
 
 header[role="banner"] {
   overflow: hidden;
-  h1, div {
-    @include simple-vendor-prefix(box-sizing,border-box);
-    width:50%; float:left;
-  }
   h1 {margin: $verticalSpace/4 0px;}
+
+  @media only screen and (min-width: 480px) {
+    h1, div {
+      @include simple-vendor-prefix(box-sizing,border-box);
+      width:50%; float:left;
+    }
+  }
 }
 
 body > footer {
