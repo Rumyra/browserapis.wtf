@@ -29,7 +29,7 @@ It's dangerous to go alone, take this: :fire:. These instructions will show you 
     - All APIs are found in the source/browserapis folder of this repository.
     - Make a copy of `example.html.md` and rename it to the name of the API you
     want to add. e.g. `ambient.html.md`.
-1. Commit your changes with a succint commit message, explaining what you have added. If your API addition is linked to a request in the issue tracker, consider adding the number of the PR to the commit message. e.g. `Adds Ambient API: Closes #98`.
+1. Commit your changes with a succinct commit message, explaining what you have added. If your API addition is linked to a request in the issue tracker, consider adding the number of the PR to the commit message. e.g. `Adds Ambient API: Closes #98`.
 1. Push your changes up to your fork.
 1. [Make a Pull Request](https://help.github.com/articles/creating-a-pull-request/)
 for this repository.

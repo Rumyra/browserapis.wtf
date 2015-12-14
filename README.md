@@ -46,5 +46,5 @@ Built by [@Rumyra](https://twitter.com/Rumyra) with help from [@BPScott](https:/
 ### Useful Links
 
 * [Licence](LICENSE)
-* [Contibuting tips](CONTRIBUTING.md)
+* [Contributing tips](CONTRIBUTING.md)
 * [Code of conduct](CODEOFCONDUCT.md)
