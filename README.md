@@ -19,6 +19,7 @@ use these commands to setup Middleman.
 
 ```
 # Install Bundler and the Middleman dependencies
+# (You may need to prefix this command with sudo...)
 gem install bundler
 bundle install
 # Run the Middleman server, watching for any changes
