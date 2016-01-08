@@ -19,6 +19,9 @@ suggested_uses:
   - User feedback for general page interactions
   - Feeling sound
   - Haptic Morse code
+
+available_check:
+  '"vibrate" in navigator'
 ---
 
 

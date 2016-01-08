@@ -15,6 +15,9 @@ links_examples:
   'HTML5 Rocks Device Orientation Example' : http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html
 suggested_uses:
   - Virtual Reality with Google Cardboard
+
+available_check:
+  'window.DeviceOrientationEvent'
 ---
 
 

@@ -20,6 +20,9 @@ links_examples:
 suggested_uses:
   - Involved content, such as video viewing or gaming, to alert user of low battery.
   - Also returns whether charging - possibilities there
+
+available_check:
+  '"getBattery" in navigator'
 ---
 
 

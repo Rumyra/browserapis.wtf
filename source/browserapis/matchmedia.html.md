@@ -1,7 +1,7 @@
 ---
 title: matchMedia
 short_description: The matchMedia API provides a way to test media queries in javascript
-tags: media query, 
+tags: media query,
 
 w3c_status: W3C Recommendation (Dec '13)
 w3c_link: http://www.w3.org/TR/cssom-view/#dom-window-matchmedia
@@ -15,6 +15,9 @@ links_tutsarts:
 
 suggested_uses:
   - Target functionality towards a particular device type
+
+available_check:
+  'window.matchMedia'
 ---
 
 ```js

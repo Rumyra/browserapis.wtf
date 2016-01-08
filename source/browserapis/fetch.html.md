@@ -16,6 +16,9 @@ suggested_uses:
   - Request data from server
   - Post data to a server
   - Replace XMLHttpRequest();
+
+available_check:
+  'window.fetch'
 ---
 
 ```js

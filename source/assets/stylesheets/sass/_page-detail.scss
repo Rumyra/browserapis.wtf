@@ -1,6 +1,23 @@
 
 .api-detail {
   padding: 0px $gutter;
+
+  #availability[title='Not available in this browser']:after {
+    cursor: default;
+    color: red;
+    content: '❎';
+  }
+
+  #availability[title='Available in this browser']:after {
+    cursor: default;
+    color: green;
+    content: '✔';
+  }
+
+  #availability[title='Availability in browser unknown']:after {
+    display: none;
+  }
+
   .resource-links {
     padding: $verticalSpace 0px;
     display: -webkit-box;
@@ -8,14 +25,14 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-flow: row wrap;
     justify-content: space-around;
 
     section {
       padding: $verticalSpace/2 $gutter;
       border-left: 6px solid $primaryColour;
-      ul { 
+      ul {
         @include clearListStyles();
         li {
           padding: $verticalSpace/4 0px;

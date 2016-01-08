@@ -1,7 +1,7 @@
 ---
 title: Web Audio API
 short_description: Allows manipulation and analysation of audio data (files or streams), as well as play back controls.
-tags: media, audio, distotion, analysis, 
+tags: media, audio, distotion, analysis,
 
 w3c_status: W3C Editors Draft
 w3c_link: http://webaudio.github.io/web-audio-api/
@@ -19,11 +19,15 @@ links_examples:
 suggested_uses:
   - Sound effects (animations/hovers etc...)
   - Controlling audio playpback
+
+available_check:
+  '(window.AudioContext || window.webkitAudioContext || window.mozAudioContext)'
+
 ---
 
 
 ```js
-var audioContext = (window.AudioContext || 
+var audioContext = (window.AudioContext ||
 window.webkitAudioContext || window.mozAudioContext);
 
 if (audioContext) {
