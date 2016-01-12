@@ -7,6 +7,7 @@ w3c_status: Fetch Living Standard
 w3c_link: https://fetch.spec.whatwg.org
 caniuse: http://caniuse.com/#feat=fetch
 mdn_docs: https://developer.mozilla.org/en/docs/Web/API/Fetch_API
+browser_support: fetch
 
 links_tutsarts:
   'Fetch API' : https://davidwalsh.name/fetch

@@ -7,6 +7,7 @@ w3c_status: W3C Recommendation Oct '13
 w3c_link: http://www.w3.org/TR/page-visibility/
 caniuse: http://caniuse.com/#feat=pagevisibility
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+browser_support: pagevisibility
 
 links_tutsarts:
   'Using the PageVisibility API': http://www.html5rocks.com/en/tutorials/pagevisibility/intro/

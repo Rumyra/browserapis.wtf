@@ -7,6 +7,7 @@ w3c_status: HTML Living Standard
 w3c_link: https://html.spec.whatwg.org/multipage/workers.html
 caniuse: http://caniuse.com/#search=worker
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
+browser_support: worker
 
 links_tutsarts:
   'Using Web Workers' : https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers

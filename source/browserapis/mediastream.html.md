@@ -8,6 +8,7 @@ w3c_link: http://www.w3.org/TR/mediacapture-streams/
 caniuse: http://caniuse.com/#feat=stream
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream
 web_platform: https://docs.webplatform.org/wiki/apis/media_capture_and_streams/MediaStream
+browser_support: stream
 
 links_tutsarts:
   'Capturing Audio & Video in HTML5': http://www.html5rocks.com/en/tutorials/getusermedia/intro/

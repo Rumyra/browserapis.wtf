@@ -8,6 +8,7 @@ w3c_link: http://www.w3.org/TR/geolocation-API/
 caniuse: http://caniuse.com/#feat=geolocation
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation
 web_platform: https://docs.webplatform.org/wiki/apis/geolocation
+browser_support: geolocation
 
 links_tutsarts:
   'Entering The Wonderful World of Geolocation' : http://www.smashingmagazine.com/2010/03/08/entering-the-wonderful-world-of-geo-location/

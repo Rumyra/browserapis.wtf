@@ -53,6 +53,23 @@
         </ul>
       </section>
     <% end %>
+
+    <% if current_page.data.browser_support %>
+      <section class="links-examples">
+        <h4>Browser Support</h4>
+        <script>
+            (function(window,document,tag,id){return window[id]||(window[id]=1)&&(function(s){
+                    var element=document.createElement(tag);
+                    s=document.getElementsByTagName(tag)[0];
+                    element.async=1;
+                    element.src='//www.browserfeatures.io/script/embed.js';
+                    s.parentNode.insertBefore(element,s);
+                })();
+            })(window,document,'script','__bfEmbed__');
+        </script>
+        <a href="//www.browserfeatures.io/iframe-embed.html?feature=<%= current_page.data.browser_support %>" class="__bfEmbed__"><%= current_page.data.browser_support %> information</a>
+      </section>
+    <% end %>
   </div>
 
   <div class="api-code">

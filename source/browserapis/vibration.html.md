@@ -8,6 +8,7 @@ w3c_link: http://www.w3.org/TR/vibration/
 caniuse: http://caniuse.com/#feat=vibration
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/Guide/API/Vibration
 web_platform: https://docs.webplatform.org/wiki/apis/vibration
+browser_support: vibration
 
 links_tutsarts:
   'HTML5: Vibration API': http://code.tutsplus.com/tutorials/html5-vibration-api--mobile-22585

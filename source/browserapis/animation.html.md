@@ -8,6 +8,7 @@ w3c_link: https://w3c.github.io/web-animations/
 caniuse: http://caniuse.com/#feat=web-animation
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Animation
 web_platform: https://docs.webplatform.org/wiki/apis/web_animations
+browser_support: web-animation
 
 links_tutsarts:
 links_examples:

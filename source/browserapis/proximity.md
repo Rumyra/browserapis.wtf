@@ -9,6 +9,7 @@ w3c_link: https://w3c.github.io/proximity/
 caniuse: http://caniuse.com/proximity
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Proximity_Events
 web_platform: https://docs.webplatform.org/wiki/apis/proximity
+browser_support: proximity
 
 links_tutsarts:
   'Sitepoint: Introducing the Proximity API' : http://www.sitepoint.com/introducing-proximity-api/

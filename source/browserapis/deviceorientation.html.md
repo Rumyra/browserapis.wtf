@@ -8,6 +8,7 @@ w3c_link: http://w3c.github.io/deviceorientation/spec-source-orientation.html
 caniuse: http://caniuse.com/#feat=deviceorientation
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation
 web_platform: https://docs.webplatform.org/wiki/apis/device_orientation
+browser_support: deviceorientation
 
 links_tutsarts:
   'HTML5 Rocks Device Orientation Tutorial' : http://www.html5rocks.com/en/tutorials/device/orientation/

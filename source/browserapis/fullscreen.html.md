@@ -8,6 +8,7 @@ w3c_link: https://fullscreen.spec.whatwg.org/
 caniuse: http://caniuse.com/#feat=fullscreen
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
 web_platform: https://docs.webplatform.org/wiki/dom/Element/requestFullscreen
+browser_support: fullscreen
 
 links_tutsarts:
   'Fullscreen API': http://davidwalsh.name/fullscreen

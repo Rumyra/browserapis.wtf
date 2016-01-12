@@ -10,7 +10,7 @@ w3c_link: https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html#speec
 caniuse: http://caniuse.com/#feat=speech-recognition
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition
 web_platform: #
-
+browser_support: speech-recognition
 
 links_tutsarts:
   #

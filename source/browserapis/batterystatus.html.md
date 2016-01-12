@@ -10,6 +10,7 @@ w3c_link: http://www.w3.org/TR/battery-status/
 caniuse: http://caniuse.com/#feat=battery-status
 mdn_docs: https://developer.mozilla.org/en/docs/Web/API/Battery_Status_API
 web_platform: https://docs.webplatform.org/wiki/apis/battery_status
+browser_support: battery-status
 
 
 links_tutsarts:

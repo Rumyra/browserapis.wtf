@@ -8,6 +8,7 @@ w3c_link: http://webaudio.github.io/web-audio-api/
 caniuse: http://caniuse.com/#feat=audio-api
 mdn_docs: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
 web_platform: https://docs.webplatform.org/wiki/apis/webaudio
+browser_support: audio-api
 
 links_tutsarts:
   'OReilly Web Audio API Book, by Boris Smus' : http://chimera.labs.oreilly.com/books/1234000001552/index.html
