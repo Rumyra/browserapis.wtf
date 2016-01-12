@@ -10,7 +10,7 @@ Web site categorising all the browser APIs - their code, resources, w3c status a
 
 Fork the repo
 
-I'm a Middleman site, the standard setup applies:
+I'm a [Middleman](https://middlemanapp.com) site, the standard setup applies:
 
 #### Install dependencies
 
@@ -46,5 +46,5 @@ Built by [@Rumyra](https://twitter.com/Rumyra) with help from [@BPScott](https:/
 ### Useful Links
 
 * [Licence](LICENSE)
-* [Contibuting tips](CONTRIBUTING.md)
+* [Contributing tips](CONTRIBUTING.md)
 * [Code of conduct](CODEOFCONDUCT.md)

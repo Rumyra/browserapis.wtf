@@ -7,6 +7,7 @@ w3c_status: W3C Recommendation (Dec '13)
 w3c_link: http://www.w3.org/TR/cssom-view/#dom-window-matchmedia
 caniuse: http://caniuse.com/#feat=matchmedia
 mdn_docs: https://developer.mozilla.org/en/docs/Web/API/Window/matchMedia
+web_platform: https://docs.webplatform.org/wiki/css/media_queries/apis/matchMedia
 browser_support: matchmedia
 
 links_tutsarts:
