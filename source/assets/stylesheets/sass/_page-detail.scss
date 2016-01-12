@@ -31,4 +31,8 @@
       @include simple-vendor-prefix(box-sizing, border-box);
     }
   }
+
+  .browser-support {
+    margin-bottom: 15px;
+  }
 }
