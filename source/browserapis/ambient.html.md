@@ -1,6 +1,6 @@
 ---
 title: Ambient Light Event
-short_description: Returns the lux value detected by the devices camera.
+short_description: Returns the lux value detected by the devices light sensor.
 tags: light, lux, value, device
 
 w3c_status: W3C Editors Draft
@@ -15,6 +15,7 @@ links_examples:
   'Changing colour to lighting conditions': http://codepen.io/patrickcatanzariti/full/jmaHI
 suggested_uses:
   - Changing colour and contrast to suit lighting conditions
+  - Trigger an action by covering device sensor
 ---
 
 
