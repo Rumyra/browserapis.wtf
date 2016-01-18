@@ -1,7 +1,7 @@
 ---
 title: Clipboard API
 short_description: Exposes web content to browser clipboard, allowing cut, copy, paste events
-tags: copy, paste, cut, clipboardevent
+tags: copy, paste, cut, clipboard, clipboardevent
 
 w3c_status: W3C Editors Draft
 w3c_link: https://w3c.github.io/clipboard-apis/
