@@ -15,7 +15,7 @@
       <% end %>
       </ul>
     </section>
-  </div>  
+  </div>
   <% end %>
 
   <div class="api-links">
@@ -53,10 +53,21 @@
         </ul>
       </section>
     <% end %>
+
+    <% if current_page.data.notes %>
+      <section class="notes">
+        <h4>Notes</h4>
+        <ul>
+        <% current_page.data.notes.each do |note| %>
+          <li><%= note %></li>
+        <% end %>
+        </ul>
+      </section>
+    <% end %>
   </div>
 
   <div class="api-code">
-      <h4>Example</h4>
+    <h4>Example</h4>
 
     <%= yield %>
 
